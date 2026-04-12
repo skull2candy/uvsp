@@ -22,8 +22,8 @@ const SEO = ({ title, description, name='UVSP Buildcon', type='website' }) => {
   return (
     <Helmet>
       { /* Standard metadata tags */ }
-      <title>{title} | UVSP Buildcon Pvt. Ltd.</title>
-      <meta name='description' content={description} />
+      <title key="title">{title} | UVSP Buildcon</title>
+      <meta key="description" name='description' content={description} />
       
       { /* OpenGraph tags */ }
       <meta property="og:type" content={type} />

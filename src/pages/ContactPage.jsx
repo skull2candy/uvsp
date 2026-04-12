@@ -2,15 +2,34 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Phone } from 'lucide-react';
 import { pageVariants } from '../utils/animations';
+import SEO from '../components/SEO';
 import './Pages.css';
 
 const ContactPage = () => {
   const [isSent, setIsSent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSent(true);
-    setTimeout(() => setIsSent(false), 5000);
+    const formData = {
+      name: e.target[0].value,
+      email: e.target[1].value,
+      phone: e.target[2].value,
+      message: e.target[3].value,
+      property_interest: 'General Inquiry'
+    };
+
+    try {
+       await fetch('http://localhost:5000/api/leads', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(formData)
+       });
+       setIsSent(true);
+       setTimeout(() => setIsSent(false), 5000);
+    } catch (err) {
+       console.error("Submission failed", err);
+       alert("Technical error. Please try again or contact via phone.");
+    }
   };
 
   const staggerContainer = {
@@ -30,6 +49,10 @@ const ContactPage = () => {
       className="page-wrapper contact-monolithic"
       style={{position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: '10rem', paddingBottom: '6rem'}}
     >
+      <SEO 
+        title="Private Advisory" 
+        description="Contact UVSP Buildcon for exclusive real estate consultations and architectural inquiries in New Delhi." 
+      />
       {/* EXTREME LUXURY TEXTURE WATERMARK */}
       <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, overflow: 'hidden', pointerEvents: 'none'}}>
          <img src="/contact.png" alt="Architectural Watermark" style={{width: '100%', height: '100%', objectFit: 'cover', opacity: 0.08, filter: 'grayscale(100%)'}} />

@@ -34,7 +34,7 @@
 
 .footer-luxury-logo {
   width: auto;
-  height: 50px;
+  height: 120px; /* Increased massively to anchor the brand identity */
   filter: brightness(2) contrast(1.2); /* Make it pop in the dark abyss */
 }
 

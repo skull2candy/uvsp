@@ -1,9 +1,21 @@
+import { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { pageVariants } from '../utils/animations';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import './Pages.css';
 
 const AboutPage = () => {
+  const videoRef = useRef(null);
+  
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(err => console.log("Video Autoplay Error:", err));
+    }
+  }, []);
+
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, 300]);
 
@@ -18,27 +30,33 @@ const AboutPage = () => {
 
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-wrapper" style={{position: 'relative'}}>
+      <SEO 
+        title="Our Philosophy" 
+        description="Discover the architectural DNA and ultra-luxury construction philosophy of UVSP Buildcon." 
+      />
       
       {/* 1. CINEMATIC MANIFESTO HERO */}
       <section className="ultra-hero" style={{height: '100vh'}}>
         <motion.div className="ultra-hero-bg" style={{ y }}>
            <video 
+             ref={videoRef}
              autoPlay 
-             loop 
              muted 
+             defaultMuted
              playsInline 
-             style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+             poster="/hero.png"
+             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} 
            >
               <source src="/urban_plot.mp4" type="video/mp4" />
            </video>
            {/* Black tint over the video */}
-           <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.65)' }}></div>
+           <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.65)', zIndex: 1 }}></div>
         </motion.div>
         
-        <div className="ultra-hero-content container" style={{paddingBottom: '20vh'}}>
-          <motion.div initial={{opacity:0, y:30}} animate={{opacity:1, y:0}} transition={{delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1]}}>
-             <span className="subtitle" style={{color: 'white', letterSpacing: '0.4em'}}>Our Manifesto</span>
-             <h1 className="heading-primary" style={{color: 'white', fontSize: 'clamp(3.5rem, 8vw, 7rem)', margin: '1.5rem 0', lineHeight: '1.1'}}>
+        <div className="ultra-hero-content container" style={{paddingBottom: '20vh', backgroundColor: 'transparent', position: 'relative', zIndex: 10}}>
+          <motion.div initial={{opacity:0, y:30}} animate={{opacity:1, y:0}} transition={{delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1]}} style={{backgroundColor: 'transparent'}}>
+             <span className="subtitle" style={{color: 'white', letterSpacing: '0.4em', backgroundColor: 'transparent'}}>Our Manifesto</span>
+             <h1 className="heading-primary" style={{color: 'white', fontSize: 'clamp(3.5rem, 8vw, 7rem)', margin: '1.5rem 0', lineHeight: '1.1', backgroundColor: 'transparent'}}>
                Redefining Luxury Through Uncompromising Execution.
              </h1>
           </motion.div>
@@ -54,18 +72,18 @@ const AboutPage = () => {
                   <p>Bespoke Projects Delivered</p>
                </motion.div>
                <motion.div variants={fadeInUp} className="metric-box">
-                  <h2>$100M+</h2>
-                  <p>Portfolio Development Value</p>
+                  <h2>18+</h2>
+                  <p>Years of Excellence</p>
                </motion.div>
                <motion.div variants={fadeInUp} className="metric-box">
-                  <h2>1%</h2>
-                  <p>Elite Material Sourcing Grid</p>
+                  <h2>500+</h2>
+                  <p>Happy Families</p>
                </motion.div>
             </motion.div>
 
             <motion.div initial={{opacity:0, y:40}} whileInView={{opacity:1, y:0}} transition={{duration:1, delay:0.4}} viewport={{once:true}} style={{maxWidth: '800px', margin: '6rem auto 0', textAlign: 'center'}}>
                  <p className="body-text-large">
-                   At UVSP Buildcon, we believe that true luxury lies in the unseen details. Our architectural vision is rooted in timeless elegance—where precise mathematics meet raw, profound natural materials. 
+                   At UVSP Buildcon, we believe that true luxury lies in the unseen details. Our architectural vision is rooted in timeless elegance—where precise mathematics meet raw, profound natural materials. For over 18 years, we have pushed the boundaries of bespoke residential development right here in New Delhi. Every foundation we establish, and every marble surface we meticulously curate, stands as an uncompromising testament to absolute quality, generational permanence, and the sophisticated lifestyles of the 500+ families who now call our properties home.
                  </p>
             </motion.div>
          </div>
@@ -114,11 +132,28 @@ const AboutPage = () => {
          </div>
       </section>
 
-      {/* 4. CALL TO ACTION */}
-      <section className="cto-statement-section" style={{borderTop: 'none'}}>
-         <div className="container" style={{textAlign: 'center'}}>
-           <h2 className="heading-primary" style={{fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '3rem'}}>Construct Your Legacy.</h2>
-           <Link to="/contact" className="btn btn-solid" style={{textDecoration: 'none', padding: '1.2rem 3rem'}}>Speak With Advisory</Link>
+      {/* 4. KINETIC PARALLAX CALL TO ACTION */}
+      <section className="cto-statement-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', backgroundImage: 'url(/cta-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', borderTop: 'none' }}>
+         {/* Premium Dark Overlay */}
+         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.65)', zIndex: 1 }} />
+         
+         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center', width: '100%', padding: '0 2rem' }}>
+           <motion.div 
+             className="glass-cto-card"
+             initial={{ opacity: 0, scale: 0.95, y: 50 }}
+             whileInView={{ opacity: 1, scale: 1, y: 0 }}
+             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+             viewport={{ once: true, margin: "-10%" }}
+           >
+             <span className="subtitle" style={{color: 'var(--accent-color)', letterSpacing: '0.4em'}}>Beyond Architecture</span>
+             <h2 className="heading-primary" style={{color: '#fff', fontSize: 'clamp(2.5rem, 6vw, 5rem)', margin: '1.5rem 0 3rem', lineHeight: '1.1'}}>
+               Construct Your Legacy.
+             </h2>
+             <Link to="/contact" className="btn-luxury-glowing" style={{textDecoration: 'none'}}>
+                <span>Speak With Advisory</span>
+                <div className="glow-sweep"></div>
+             </Link>
+           </motion.div>
          </div>
       </section>
 

@@ -1,53 +1,89 @@
-.gallery-section {
-  background-color: var(--bg-color);
+/* Gallery.css - The Expanding Accordion Exhibition */
+.gallery-masterpiece {
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  padding: 8rem 0;
+  overflow: hidden;
 }
 
-.gallery-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 250px;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .gallery-grid {
-    grid-auto-rows: 300px;
-  }
+.accordion-container {
+  display: flex;
+  width: 100vw;
+  height: 70vh;
+  margin-left: calc(-50vw + 50%); /* Full bleed override without breaking horizontal scroll */
+  gap: 4px; /* Minimal gap between slivers */
+  padding: 0 1rem;
 }
 
 @media (min-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 400px;
-    gap: 2rem;
+  .accordion-container {
+    height: 85vh; /* Massive cinematic feel */
+    gap: 8px;
+    padding: 0 2rem;
   }
 }
 
-.gallery-item {
+.accordion-item {
+  flex: 1; /* Inactive items shrink */
   position: relative;
   overflow: hidden;
+  border-radius: 8px; /* Elegant subtle rounding */
+  transition: flex 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
   cursor: pointer;
+  background-color: #050505;
+  filter: brightness(0.3) saturate(0.2); /* Deeply dim inactive items */
 }
 
-.gallery-item img {
+/* The magic expansion */
+.accordion-item.active {
+  flex: 8; /* Expands massively */
+  filter: brightness(1) saturate(1); /* Full color and light */
+}
+
+@media (min-width: 1024px) {
+  .accordion-item.active {
+    flex: 15; /* Even wider on desktop */
+  }
+}
+
+.accordion-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s ease;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  object-position: center center;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
+/* Very slight zoom when active */
+.accordion-item.active .accordion-media {
+  transform: scale(1.02);
 }
 
-@media (min-width: 1024px) {
-  .item-0 { grid-column: span 2; grid-row: span 2; }
-  .item-1 { grid-column: span 2; grid-row: span 1; }
-  .item-2 { grid-column: span 1; grid-row: span 1; }
-  .item-3 { grid-column: span 1; grid-row: span 1; }
+/* MOBILE RESPONSIVE PIVOT */
+@media (max-width: 1024px) {
+  .gallery-masterpiece {
+    padding: 4rem 0;
+  }
+  
+  .accordion-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .accordion-item {
+    height: 15vh;
+    min-height: 120px;
+    width: 100%;
+    filter: brightness(0.5); /* slightly more visible on mobile */
+  }
+
+  .accordion-item.active {
+    height: 45vh;
+    flex: none;
+    filter: brightness(1);
+  }
 }

@@ -26,7 +26,7 @@ const FeaturedProject = () => {
             <motion.div className="spec-grid" initial="initial" whileInView="animate" viewport={{once:true}}>
                <div className="spec-item">
                  <span className="label-text">Location</span>
-                 <h3>South Delhi</h3>
+                 <h3>Vasant Kunj, South Delhi</h3>
                </div>
                <div className="spec-item">
                  <span className="label-text">Scale</span>

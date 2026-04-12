@@ -15,6 +15,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import AboutPage from './pages/AboutPage';
 import JournalPage from './pages/JournalPage';
 import ArticleDetail from './pages/ArticleDetail';
+import LeadsDashboard from './pages/LeadsDashboard';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function AnimatedRoutes() {
         <Route path="/project/featured" element={<Navigate to="/property/the-crown" replace />} />
         <Route path="/property/:id" element={<ProjectDetail />} />
         <Route path="/project/:id" element={<Project />} />
+        <Route path="/admin/leads" element={<LeadsDashboard />} />
       </Routes>
     </AnimatePresence>
   );
@@ -76,15 +78,13 @@ function App() {
   }, []);
 
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <main>
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </BrowserRouter>
-    </HelmetProvider>
+    <BrowserRouter>
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <main>
+        <AnimatedRoutes />
+      </main>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
