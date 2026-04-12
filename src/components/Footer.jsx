@@ -71,10 +71,15 @@ const Footer = () => {
               <div className="f-contact-block" style={{marginTop: '4rem'}}>
                  <span className="f-label">Private Advisory</span>
                  <a href="mailto:info@uvspbuildcon.com" className="f-contact-link">info@uvspbuildcon.com</a>
-                 <div style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
+                 <div style={{display: 'flex', gap: '1rem', alignItems: 'center', marginBottom: '0.75rem'}}>
                     <a href="tel:+918800589785" className="f-contact-link" style={{marginBottom: 0}}>+91 88005 89785</a>
                     <a href="tel:+918800589785" style={{color: 'var(--accent-color)', transition: 'all 0.3s ease'}}><Phone size={20} /></a>
                     <a href="https://wa.me/918800589785" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', transition: 'all 0.3s ease'}}><MessageCircle size={20} /></a>
+                 </div>
+                 <div style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
+                    <a href="tel:+917982168465" className="f-contact-link" style={{marginBottom: 0}}>+91 79821 68465</a>
+                    <a href="tel:+917982168465" style={{color: 'var(--accent-color)', transition: 'all 0.3s ease'}}><Phone size={20} /></a>
+                    <a href="https://wa.me/917982168465" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent-color)', transition: 'all 0.3s ease'}}><MessageCircle size={20} /></a>
                  </div>
               </div>
            </motion.div>
