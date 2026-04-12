@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import ScrollProgress from './components/ScrollProgress';
 import CursorGlow from './components/CursorGlow';
+import PageLoader from './components/PageLoader';
 
 // Pages
 import Home from './pages/Home';
@@ -82,6 +83,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <PageLoader />
       <ScrollProgress />
       <CursorGlow />
       <Navbar theme={theme} toggleTheme={toggleTheme} />

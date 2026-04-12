@@ -89,9 +89,97 @@ button {
   color: var(--accent-color);
 }
 
+/* ═══════════════════════════════════════════════════
+   PREMIUM BUTTON SYSTEM — Glassmorphism + Shimmer
+   ═══════════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+
+/* Shimmer sweep on hover */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 150%;
+}
+
+.btn:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-solid {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(200, 176, 130, 0.25);
+}
+
+.btn-solid:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(200, 176, 130, 0.35);
+}
+
+/* Premium unlock button */
+.btn-unlock {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-unlock:hover {
+  background: var(--accent-color);
+  color: #000;
+}
+
+/* Glass card utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
 .section-padding {
   padding: 6rem 1.5rem;
 }
+
 
 @media (min-width: 768px) {
   .section-padding {
