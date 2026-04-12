@@ -15,7 +15,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import AboutPage from './pages/AboutPage';
 import JournalPage from './pages/JournalPage';
 import ArticleDetail from './pages/ArticleDetail';
-import LeadsDashboard from './pages/LeadsDashboard';
+import LeadsDashboard from './pages/LeadsDashboard.jsx';
 
 function AnimatedRoutes() {
   const location = useLocation();
