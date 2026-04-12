@@ -106,7 +106,7 @@ export const journalData = [
       <h2>The Prestige of Privacy</h2>
       <p>In a crowded city, privacy is the greatest luxury. The gated estates of <strong>Mehrauli property portfolios</strong> offer secluded acreages that feel like a private world, entirely detached from the urban chaos of New Delhi.</p>
     `
-  }
+  },
   {
     id: 'builder-floors-south-delhi-guide',
     title: 'The Complete Guide to Luxury Builder Floors in South Delhi (2026)',
