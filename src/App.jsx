@@ -5,6 +5,9 @@ import { AnimatePresence } from 'framer-motion';
 import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
+import ScrollProgress from './components/ScrollProgress';
+import CursorGlow from './components/CursorGlow';
 
 // Pages
 import Home from './pages/Home';
@@ -79,11 +82,14 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollProgress />
+      <CursorGlow />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <AnimatedRoutes />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </BrowserRouter>
   );
 }
