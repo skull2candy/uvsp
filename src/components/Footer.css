@@ -1,8 +1,12 @@
-/* CINEMATIC FOOTER OVERHAUL */
+/* CINEMATIC FOOTER OVERHAUL — FULLY RESPONSIVE */
+
+/* ================================================================
+   BASE / MOBILE-FIRST
+   ================================================================ */
 .footer-cinematic {
-  background-color: #050505; /* Deeper than standard var(--bg-color) to anchor the page */
-  padding: 8rem 0 2rem 0;
-  border-top: 1px solid rgba(255,255,255,0.05); /* Very subtle separation */
+  background-color: #050505;
+  padding: 5rem 0 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
   position: relative;
   overflow: hidden;
 }
@@ -10,88 +14,91 @@
 .footer-c-container {
   display: flex;
   flex-direction: column;
+  padding: 0 1.5rem;
 }
 
-/* TOP SPLIT GEOMETRY */
+/* ── TOP SPLIT: Brand + Links ── */
 .footer-split {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
-  margin-bottom: 8rem;
+  gap: 3rem;
+  margin-bottom: 4rem;
 }
 
-@media (min-width: 1024px) {
-  .footer-split {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-/* LEFT COLUMN (Brand) */
+/* ── BRAND COLUMN ── */
 .footer-left {
-  max-width: 400px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .footer-luxury-logo {
   width: auto;
-  height: 120px; /* Increased massively to anchor the brand identity */
-  filter: brightness(2) contrast(1.2); /* Make it pop in the dark abyss */
+  height: 70px;
+  filter: brightness(2) contrast(1.2);
+  margin-bottom: 1.5rem;
 }
 
 .footer-mission {
   font-family: 'Inter', sans-serif;
-  color: rgba(255,255,255,0.6);
-  font-size: 1.1rem;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.95rem;
   line-height: 1.8;
+  max-width: 420px;
 }
 
-/* RIGHT COLUMN (Links & Nav) */
+/* ── CONTACT BLOCK ── */
+.f-contact-block {
+  margin-top: 2rem !important;
+}
+
+.f-contact-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.f-contact-link:hover {
+  color: var(--accent-color);
+}
+
+/* ── LINKS COLUMNS (right side) ── */
 .footer-right {
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  flex-direction: row;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
-  .footer-right {
-    flex-direction: row;
-    gap: 8rem;
-  }
+.f-nav-col {
+  flex: 1;
+  min-width: 130px;
 }
 
 .f-label {
   display: block;
   font-family: 'Inter', sans-serif;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.35);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-size: 0.8rem;
-  margin-bottom: 2rem;
+  font-size: 0.7rem;
+  margin-bottom: 1.25rem;
 }
 
-/* KINETIC HOVER LINKS */
+/* ── KINETIC LINKS ── */
 .f-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
-.kinetic-link, .f-contact-link {
+.kinetic-link {
   text-decoration: none;
   cursor: pointer;
-  display: block; /* Important for bounding box hover */
-}
-
-.f-contact-link {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: #fff;
-  transition: color 0.3s ease;
-  margin-bottom: 1rem;
-}
-
-.f-contact-link:hover {
-  color: var(--accent-color);
+  display: block;
 }
 
 .kinetic-link-content {
@@ -101,13 +108,13 @@
 
 .kl-text {
   font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #fff;
   transition: opacity 0.3s ease;
 }
 
 .kinetic-link:hover .kl-text {
-  opacity: 0.7; /* Subtly dim text while arrow slides out */
+  opacity: 0.6;
 }
 
 .kl-arrow {
@@ -117,64 +124,184 @@
   align-items: center;
 }
 
-/* MASSIVE BOTTOM TYPOGRAPHY */
+/* ── MASSIVE BOTTOM TYPOGRAPHY ── */
 .footer-massive-type-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  padding-bottom: 4rem;
+  padding: 3rem 0;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .footer-massive-type {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.04); /* Just barely visible in the dark background */
-  font-size: clamp(3rem, 15vw, 16rem); /* MASSIVE SCALE */
-  line-height: 0.8;
+  color: rgba(255,255,255,0.04);
+  font-size: clamp(2rem, 12vw, 14rem);
+  line-height: 0.85;
   white-space: nowrap;
   user-select: none;
   letter-spacing: -0.02em;
 }
 
-/* METADATA ROW */
+/* ── BOTTOM META ROW ── */
 .footer-bottom-row {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
   text-align: center;
+  padding-bottom: 1.5rem;
 }
 
+.f-meta {
+  font-family: 'Inter', sans-serif;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.78rem;
+}
+
+.f-legal {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.f-legal a {
+  font-family: 'Inter', sans-serif;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.f-legal a:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+/* ================================================================
+   TABLET — 640px+
+   ================================================================ */
+@media (min-width: 640px) {
+  .footer-cinematic {
+    padding: 7rem 0 2.5rem;
+  }
+
+  .footer-c-container {
+    padding: 0 2.5rem;
+  }
+
+  .footer-split {
+    gap: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .footer-luxury-logo {
+    height: 90px;
+  }
+
+  .footer-massive-type {
+    font-size: clamp(2.5rem, 13vw, 14rem);
+  }
+
+  .f-contact-link {
+    font-size: 1.4rem;
+  }
+
+  .kl-text {
+    font-size: 1rem;
+  }
+}
+
+/* ================================================================
+   TABLET LANDSCAPE — 768px+
+   ================================================================ */
 @media (min-width: 768px) {
   .footer-bottom-row {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
+
+  .f-legal {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
 }
 
-.f-meta {
-  font-family: 'Inter', sans-serif;
-  color: rgba(255,255,255,0.4);
-  font-size: 0.85rem;
+/* ================================================================
+   DESKTOP — 1024px+
+   ================================================================ */
+@media (min-width: 1024px) {
+  .footer-cinematic {
+    padding: 9rem 0 3rem;
+  }
+
+  .footer-c-container {
+    padding: 0 4%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .footer-split {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8rem;
+    margin-bottom: 9rem;
+  }
+
+  .footer-left {
+    max-width: 420px;
+    flex-shrink: 0;
+  }
+
+  .footer-luxury-logo {
+    height: 120px;
+  }
+
+  .footer-mission {
+    font-size: 1.1rem;
+  }
+
+  .f-contact-block {
+    margin-top: 4rem !important;
+  }
+
+  .f-contact-link {
+    font-size: 1.5rem;
+  }
+
+  .footer-right {
+    gap: 7rem;
+  }
+
+  .footer-massive-type {
+    font-size: clamp(6rem, 15vw, 16rem);
+  }
+
+  .kl-text {
+    font-size: 1.1rem;
+  }
+
+  .f-label {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .f-nav-list {
+    gap: 1.5rem;
+  }
 }
 
-.f-legal {
-  display: flex;
-  gap: 2rem;
-}
-
-.f-legal a {
-  font-family: 'Inter', sans-serif;
-  color: rgba(255,255,255,0.4);
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.f-legal a:hover {
-  color: #fff;
+/* ================================================================
+   LARGE DESKTOP — 1440px+
+   ================================================================ */
+@media (min-width: 1440px) {
+  .footer-massive-type {
+    font-size: clamp(10rem, 16vw, 18rem);
+  }
 }
