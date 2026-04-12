@@ -1,6 +1,6 @@
-const express = require('express');
-const cors = require('cors');
-const db = require('./db');
+import express from 'express';
+import cors from 'cors';
+import * as db from './db.js';
 
 const app = express();
 
@@ -42,4 +42,4 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'serverless api is operational' });
 });
 
-module.exports = app;
+export default app;
