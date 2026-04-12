@@ -47,8 +47,8 @@ const TrustStats = () => (
   }}>
     <div className="container" style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: '3rem 2rem',
+      gridTemplateColumns: 'repeat(4, 1fr)',
+      gap: '2rem',
     }}>
       {stats.map((stat, i) => (
         <motion.div
