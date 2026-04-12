@@ -131,7 +131,7 @@ export const journalData = [
       <p>Luxury <strong>builder floors in Vasant Kunj</strong> typically range from ₹1.5 Cr to ₹3.5 Cr depending on floor size, location, and finishing quality. At UVSP Buildcon, our residences start at ₹1.50 Cr for Ryhan Square and ₹1.89 Cr for The Crown — with finishes that rival developments costing multiples more.</p>
 
       <h2>Why Choose UVSP Buildcon?</h2>
-      <p>As South Delhi's most trusted <strong>real estate developer</strong>, UVSP Buildcon has delivered 500+ happy families over 18+ years. Our commitment to transparent pricing, timely possession, and uncompromised quality makes us the first choice for discerning buyers.</p>
+      <p>As South Delhi's most trusted <strong>real estate developer</strong>, UVSP Buildcon has delivered 500+ happy families and 50+ bespoke projects over 18+ years. Our commitment to transparent pricing, timely possession, and uncompromised quality makes us the first choice for discerning buyers.</p>
     `
   },
   {

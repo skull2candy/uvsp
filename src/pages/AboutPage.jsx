@@ -69,7 +69,7 @@ const AboutPage = () => {
          <div className="container">
             <motion.div className="metrics-grid" variants={staggerContainer} initial="initial" whileInView="animate" viewport={{once:true}}>
                <motion.div variants={fadeInUp} className="metric-box">
-                  <h2>30+</h2>
+                  <h2>50+</h2>
                   <p>Bespoke Projects Delivered</p>
                </motion.div>
                <motion.div variants={fadeInUp} className="metric-box">

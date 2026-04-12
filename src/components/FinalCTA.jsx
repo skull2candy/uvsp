@@ -80,7 +80,7 @@ const FinalCTA = () => (
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        18 years of trust. 500+ happy families. One call away from your finest address in South Delhi.
+        18 years of trust. 50+ delivered projects. 500+ happy families. One call away from your finest address in South Delhi.
       </motion.p>
 
       <motion.div
