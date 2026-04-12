@@ -31,8 +31,9 @@ const AboutPage = () => {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-wrapper" style={{position: 'relative'}}>
       <SEO 
-        title="Our Philosophy" 
-        description="Discover the architectural DNA and ultra-luxury construction philosophy of UVSP Buildcon." 
+        title="About UVSP Buildcon | Trusted South Delhi Real Estate Developers" 
+        description="UVSP Buildcon — 18+ years of trust, premium construction, and luxury real estate development in South Delhi. Meet the team behind Delhi's finest residences." 
+        canonical="/about"
       />
       
       {/* 1. CINEMATIC MANIFESTO HERO */}
