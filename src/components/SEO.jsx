@@ -21,22 +21,21 @@ const SEO = ({ title, description, name='UVSP Buildcon', type='website' }) => {
 
   return (
     <Helmet>
-      { /* Standard metadata tags */ }
-      <title key="title">{title} | UVSP Buildcon</title>
-      <meta key="description" name='description' content={description} />
+      <title>{title} | UVSP Buildcon</title>
+      <meta name="description" content={description} />
       
-      { /* OpenGraph tags */ }
+      {/* OpenGraph tags */}
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={`${title} | UVSP Buildcon`} />
       <meta property="og:description" content={description} />
+      <meta property="og:url" content="https://uvspbuildcon.com" />
       
-      { /* Twitter tags */ }
-      <meta name="twitter:creator" content={name} />
-      <meta name="twitter:card" content={type} />
-      <meta name="twitter:title" content={title} />
+      {/* Twitter tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={`${title} | UVSP Buildcon`} />
       <meta name="twitter:description" content={description} />
       
-      { /* JSON-LD Schema for Google Rich Snippets */ }
+      {/* JSON-LD Schema for Google Rich Snippets */}
       <script type="application/ld+json">
         {JSON.stringify(schemaMarkup)}
       </script>
