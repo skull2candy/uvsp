@@ -34,7 +34,7 @@ function AnimatedRoutes() {
         <Route path="/journal/:id" element={<ArticleDetail />} />
         <Route path="/project/featured" element={<Navigate to="/property/the-crown" replace />} />
         <Route path="/property/:id" element={<ProjectDetail />} />
-        <Route path="/project/:id" element={<Project />} />
+        <Route path="/portfolio" element={<Project />} />
         <Route path="/admin/leads" element={<LeadsDashboard />} />
       </Routes>
     </AnimatePresence>
