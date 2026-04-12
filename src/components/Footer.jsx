@@ -100,9 +100,8 @@ const Footer = () => {
               <motion.div variants={itemVariants} className="f-nav-col">
                  <span className="f-label">Network</span>
                  <nav className="f-nav-list">
-                    <KineticLink external to="#" label="Instagram" />
-                    <KineticLink external to="#" label="LinkedIn" />
-                    <KineticLink external to="#" label="Architectural Digest" />
+                    <KineticLink external to="https://www.instagram.com/uvspbuildcon?igsh=OGt3OG5kcnNocHQ0&utm_source=qr" label="Instagram" />
+                    <KineticLink external to="https://www.99acres.com/the-crown-vasant-kunj-south-delhi-npxid-r457857?src=BRCRUMB&refSection=BRCRUMB" label="99acres" />
                  </nav>
               </motion.div>
 
