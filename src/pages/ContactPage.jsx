@@ -18,9 +18,8 @@ const ContactPage = () => {
       property_interest: 'General Inquiry'
     };
 
-    const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
     try {
-       await fetch(`${API_BASE_URL}/api/leads`, {
+       await fetch('/api/leads', {
          method: 'POST',
          headers: { 'Content-Type': 'application/json' },
          body: JSON.stringify(formData)

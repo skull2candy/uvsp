@@ -25,9 +25,8 @@ const LeadsDashboard = () => {
 
   const fetchLeads = async () => {
     setLoading(true);
-    const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
     try {
-      const response = await fetch(`${API_BASE_URL}/api/leads`, {
+      const response = await fetch('/api/leads', {
         headers: { 'x-admin-key': 'UVSP-2026' }
       });
       const data = await response.json();
