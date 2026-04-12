@@ -69,10 +69,10 @@ const Projects = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-             <h2 className="stat-number">30+</h2>
-             <h3 className="stat-title">Legacy Projects Sold</h3>
+             <h2 className="stat-number">50+</h2>
+             <h3 className="stat-title">Legacy Projects Delivered</h3>
              <p className="stat-desc">
-               In exclusive collaboration with Kiera Construction and premiere developers, forging an undeniable legacy of architectural supremacy in New Delhi.
+               Forging an undeniable legacy of architectural supremacy in New Delhi, UVSP Buildcon has redefined luxury living across the capital's most prestigious postal codes.
              </p>
           </motion.div>
         </div>
