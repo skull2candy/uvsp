@@ -90,10 +90,16 @@ button {
 }
 
 .section-padding {
-  padding: 10rem 2rem;
+  padding: 6rem 1.5rem;
 }
 
 @media (min-width: 768px) {
+  .section-padding {
+    padding: 12rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .section-padding {
     padding: 16rem 5%;
   }
@@ -116,14 +122,14 @@ button {
 }
 
 .heading-primary {
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3rem, 10vw, 7rem);
   line-height: 1.05;
   margin-bottom: 2rem;
   letter-spacing: -0.04em;
 }
 
 .heading-secondary {
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(2.2rem, 7vw, 5rem);
   line-height: 1.1;
   margin-bottom: 2.5rem;
   letter-spacing: -0.03em;
