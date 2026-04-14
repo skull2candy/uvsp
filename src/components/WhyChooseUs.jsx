@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
         </motion.div>
 
         <div className="accordion-container-six">
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const isActive = activeId === feature.id;
             
             return (
@@ -76,13 +76,14 @@ const WhyChooseUs = () => {
                 onClick={() => setActiveId(feature.id)}
                 onHoverStart={() => setActiveId(feature.id)}
                 className={`accordion-panel ${isActive ? 'active' : ''}`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ 
-                  layout: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-                  opacity: { duration: 0.8 },
-                  y: { duration: 0.8 }
+                   duration: 0.8,
+                   delay: index * 0.1,
+                   ease: [0.16, 1, 0.3, 1],
+                   layout: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
                 }}
               >
                 {/* Background Image Layer */}
@@ -91,9 +92,15 @@ const WhyChooseUs = () => {
 
                 {/* Content Container */}
                 <motion.div className="panel-content" layout="position">
-                  <div className="panel-icon-wrap">
+                  <motion.div 
+                    className="panel-icon-wrap"
+                    animate={isActive ? { 
+                      y: [0, -5, 0],
+                      transition: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                    } : {}}
+                  >
                     {feature.icon}
-                  </div>
+                  </motion.div>
                   
                   <motion.div className="panel-text-block" layout="position">
                     <h3 className="panel-title">{feature.title}</h3>
