@@ -29,7 +29,7 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            18+ Years of Building Trust in South Delhi
+            The Most Trusted Builders in South Delhi
           </motion.span>
           <motion.h1
             className="heading-primary"
@@ -37,7 +37,7 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.7 }}
           >
-            Crafting Timeless<br />Spaces
+            Premium South Delhi<br />Builder Floors
           </motion.h1>
           <motion.p
             className="hero-subheadline"

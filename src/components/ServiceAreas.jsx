@@ -56,10 +56,10 @@ const ServiceAreas = () => {
           transition={{ duration: 1 }}
           style={{ marginBottom: '6rem', maxWidth: '600px' }}
         >
-          <span className="subtitle">Where We Build</span>
-          <h2 className="heading-secondary">Our Prime Locations</h2>
+          <span className="subtitle">Premier Builders in South Delhi</span>
+          <h2 className="heading-secondary">Dominating the South Delhi Luxury Corridor</h2>
           <p style={{ fontFamily: 'Inter, sans-serif', color: 'var(--text-color)', opacity: 0.6, lineHeight: 1.7 }}>
-            50+ delivered projects across South Delhi's most coveted addresses. Every location handpicked for lifestyle, connectivity, and investment value.
+            As the most reputed <strong>builders in South Delhi</strong>, we have delivered 50+ bespoke luxury floors in Vasant Kunj, Mehrauli, Saket, and beyond. Every location is handpicked for elite lifestyle and high capital appreciation.
           </p>
         </motion.div>
 

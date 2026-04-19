@@ -46,8 +46,8 @@ const SEO = ({
 }) => {
   const fullTitle = title
     ? `${title} | UVSP Buildcon`
-    : 'UVSP Buildcon Pvt. Ltd. | Luxury Builder Floors & Premium Properties in South Delhi';
-  const metaDesc = description || 'Discover luxury builder floors, premium homes, and trusted real estate development in South Delhi with UVSP Buildcon. 18+ years of excellence.';
+    : 'Top Builders in South Delhi | UVSP Buildcon | Luxury Builder Floors';
+  const metaDesc = description || 'UVSP Buildcon — The #1 choice for luxury builder floors and premium homes in South Delhi. 18+ years of excellence in Vasant Kunj, Mehrauli, Saket, and Chattarpur.';
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : undefined;
   const ogImage = image || DEFAULT_IMAGE;
 
@@ -65,12 +65,32 @@ const SEO = ({
     }
   } : null;
 
+  // Add RealEstateListing Schema for broader search impact
+  const listingSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Luxury Builder Floors in Vasant Kunj",
+        "url": `${SITE_URL}/property/the-crown`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Premium Independent Floors in Mehrauli",
+        "url": `${SITE_URL}/property/ryhan-square`
+      }
+    ]
+  };
+
   return (
     <Helmet>
       {/* Core */}
       <title>{fullTitle}</title>
       <meta name="description" content={metaDesc} />
-      <meta name="keywords" content="luxury builder floors South Delhi, premium properties South Delhi, luxury homes Delhi, buy property Vasant Kunj, builder floors Saket, premium floors Chattarpur, UVSP Buildcon, real estate developer South Delhi, luxury real estate New Delhi" />
+      <meta name="keywords" content="builders in south delhi, luxury builder floors south delhi, premium properties south delhi, best real estate developers south delhi, luxury houses delhi, buy property vasant kunj, builder floors saket, independent floors chattarpur, UVSP Buildcon, royal builders delhi" />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
@@ -89,12 +109,15 @@ const SEO = ({
       <meta name="twitter:description" content={metaDesc} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* Local Business Schema */}
+      {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(localBusinessSchema)}
       </script>
 
-      {/* Article Schema (blog posts) */}
+      <script type="application/ld+json">
+        {JSON.stringify(listingSchema)}
+      </script>
+
       {articleSchema && (
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}

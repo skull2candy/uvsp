@@ -82,17 +82,19 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <PageLoader />
-      <ScrollProgress />
-      <CursorGlow />
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <main>
-        <AnimatedRoutes />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <PageLoader />
+        <ScrollProgress />
+        <CursorGlow />
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <main>
+          <AnimatedRoutes />
+        </main>
+        <Footer />
+        <WhatsAppFloat />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

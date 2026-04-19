@@ -27,8 +27,8 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="subtitle">The Philosophy</span>
-          <h2 className="heading-secondary">Redefining Luxury Living</h2>
+          <span className="subtitle">Luxury Developers</span>
+          <h2 className="heading-secondary">Best Builders in South Delhi</h2>
           <p className="about-text">
             At UVSP Buildcon, we believe that true luxury lies in the unseen details. Our architectural vision is rooted in the timeless elegance of Italian design—where form meets function precisely, and natural materials speak their own quiet, profound language. 
           </p>
