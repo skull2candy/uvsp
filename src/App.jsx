@@ -20,6 +20,7 @@ import AboutPage from './pages/AboutPage';
 import JournalPage from './pages/JournalPage';
 import ArticleDetail from './pages/ArticleDetail';
 import LeadsDashboard from './pages/LeadsDashboard.jsx';
+import NotFound from './pages/NotFound';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -40,6 +41,8 @@ function AnimatedRoutes() {
         <Route path="/property/:id" element={<ProjectDetail />} />
         <Route path="/portfolio" element={<Project />} />
         <Route path="/admin/leads" element={<LeadsDashboard />} />
+        {/* Catch-all route for technical SEO and 404 safety */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );

@@ -58,8 +58,25 @@ app.get('/api/leads', async (req, res) => {
   }
 });
 
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'serverless api is operational' });
+app.get('/api/health', async (req, res) => {
+  try {
+    const sql = getDb();
+    // Test database connection
+    await sql`SELECT 1`;
+    res.json({ status: 'serverless api is operational', db: 'connected' });
+  } catch (err) {
+    res.status(503).json({ status: 'partially operational', db: 'unreachable', error: 'Service Unavailable' });
+  }
+});
+
+// GLOBAL ERROR HANDLER
+app.use((err, req, res, next) => {
+  console.error('Unhandled Server Error:', err);
+  res.status(500).json({ 
+    success: false, 
+    error: 'Internal Server Error',
+    message: process.env.NODE_ENV === 'development' ? err.message : 'Something went wrong'
+  });
 });
 
 export default app;
