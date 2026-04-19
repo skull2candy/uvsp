@@ -4,31 +4,39 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Rajiv Sharma',
-    role: 'Director, Sharma Enterprises',
-    location: 'Vasant Kunj, South Delhi',
-    review: 'UVSP Buildcon delivered a residence that truly exceeds every expectation. The attention to detail in The Crown is extraordinary — every corner radiates the quiet luxury I was looking for.',
+    name: 'Harish Sharma',
+    location: 'Verified Review',
+    review: 'It was a very positive experience interacting with the UVSP team. Their passion, dedication, and commitment toward their responsibilities are clearly visible. Wishing them continued success.',
     rating: 5,
   },
   {
-    name: 'Priya Malhotra',
-    role: 'Senior Partner, M&A Law Firm',
-    location: 'Mehrauli, South Delhi',
-    review: 'What struck me most was their transparent process. No hidden costs, timely possession, and a finish quality that rivals the finest residences in Delhi. UVSP is a name I recommend unconditionally.',
+    name: 'Shashank Trivedi',
+    location: 'Verified Review',
+    review: 'Amazing work! Truly honest and delivered with the right perspective. Highly recommended for anyone looking for quality and reliability.',
     rating: 5,
   },
   {
-    name: 'Anil & Sunita Kapoor',
-    role: 'Homeowners',
-    location: 'Ryhan Square, Vasant Kunj',
-    review: 'After 20 years of searching, we finally found the home we deserved. The craftsmanship at Ryhan Square is extraordinary. Our family feels the difference every single day.',
+    name: 'Kaveri Kadam',
+    location: 'Verified Review',
+    review: 'The team shows passion and dedication for their work. Both have a Strong potential and has clear idea with concepts. All the best for future success.',
     rating: 5,
   },
   {
-    name: 'Vikram Anand',
-    role: 'Real Estate Investor',
-    location: 'South Delhi Portfolio',
-    review: 'As an investor, I have worked with dozens of developers. UVSP Buildcon stands apart — their properties appreciate faster, their build quality is unmatched, and their team is a pleasure to work with.',
+    name: 'Ripudaman Chauhan',
+    location: 'Verified Review',
+    review: 'Amazing work. Very co-operative, helpful, and trustworthy. Keep the great work up!',
+    rating: 5,
+  },
+  {
+    name: 'Aamir Aashique',
+    location: 'Verified Review',
+    review: 'One of the true real estate people—honest and dedicated to their craft.',
+    rating: 5,
+  },
+  {
+    name: 'Akhileshwar Prasad',
+    location: 'Verified Review',
+    review: 'Professional, energetic and incredibly responsive. 10/10 experience with UVSP Buildcon.',
     rating: 5,
   },
 ];
@@ -130,7 +138,7 @@ const Testimonials = () => {
                   color: 'var(--accent-color)',
                   marginTop: '0.3rem',
                 }}>
-                  {testimonials[current].role} &nbsp;·&nbsp; {testimonials[current].location}
+                  {testimonials[current].location}
                 </div>
               </div>
             </motion.div>
