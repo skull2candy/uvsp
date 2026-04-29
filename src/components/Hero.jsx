@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <motion.div className="hero-image-container" style={{ y }}>
-        <img src="/main-hero.png" alt="Luxury Architecture" className="hero-image" />
+        <img src="/main-hero.webp" alt="Luxury Architecture" className="hero-image" />
         <div className="hero-overlay"></div>
       </motion.div>
 

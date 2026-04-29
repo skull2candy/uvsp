@@ -8,13 +8,13 @@ const projectsData = [
     id: 'ryhan-square',
     title: 'Ryhan Square',
     location: 'Vasant Kunj',
-    image: '/ryhan-square-new.png'
+    image: '/ryhan-square-new.webp'
   },
   {
     id: 'the-crown',
     title: 'THE CROWN',
     location: 'Vasant Kunj',
-    image: '/the-crown-new.png',
+    image: '/the-crown-new.webp',
     status: 'Under Construction'
   }
 ];

@@ -87,7 +87,7 @@ const Project = () => {
       <section ref={section1Ref} className="sticky-split-container">
           <div className="sticky-left">
             <motion.img 
-              src="/the-crown-new.png" 
+              src="/the-crown-new.webp" 
               alt="The Crown" 
               className="sticky-image" 
               style={{ y: y1 }}
@@ -144,7 +144,7 @@ const Project = () => {
       <section ref={section2Ref} className="sticky-split-container reverse" style={{backgroundColor: 'var(--surface-color)'}}>
          <div className="sticky-left">
             <motion.img 
-              src="/ryhan-square-new.png" 
+              src="/ryhan-square-new.webp" 
               alt="Ryhan Square" 
               className="sticky-image" 
               style={{ y: y2 }}

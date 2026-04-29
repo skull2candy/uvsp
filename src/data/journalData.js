@@ -112,7 +112,7 @@ export const journalData = [
     title: 'The Complete Guide to Luxury Builder Floors in South Delhi (2026)',
     date: 'July 01, 2026',
     category: 'Buyer\'s Guide',
-    image: '/ryhan-square-new.png',
+    image: '/ryhan-square-new.webp',
     excerpt: 'The ultimate guide to luxury builder floors in South Delhi for 2026. Learn about the best locations (Vasant Kunj, Saket, Mehrauli), pricing, and why UVSP Buildcon is the top builder in South Delhi.',
     content: `
       <h2>The Rise of Luxury Builder Floors in South Delhi</h2>
@@ -138,7 +138,7 @@ export const journalData = [
     title: 'Why Vasant Kunj Is South Delhi\'s Most Coveted Address for Property Buyers',
     date: 'July 10, 2026',
     category: 'Location Guide',
-    image: '/the-crown-new.png',
+    image: '/the-crown-new.webp',
     excerpt: 'A definitive guide for buyers looking to purchase luxury property in Vasant Kunj, New Delhi — covering connectivity, lifestyle, pricing, and best projects.',
     content: `
       <h2>Why Buy Property in Vasant Kunj?</h2>

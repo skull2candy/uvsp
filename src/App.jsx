@@ -21,6 +21,30 @@ import JournalPage from './pages/JournalPage';
 import ArticleDetail from './pages/ArticleDetail';
 import LeadsDashboard from './pages/LeadsDashboard.jsx';
 import NotFound from './pages/NotFound';
+import AreaPage from './pages/AreaPage';
+
+// Area Data
+const vasantKunjData = {
+  areaName: "Vasant Kunj",
+  title: "Luxury Builder Floors in Vasant Kunj | UVSP Buildcon",
+  description: "Explore ultra-luxury builder floors in Vasant Kunj. 4BHK premium residences crafted by UVSP Buildcon.",
+  heroSubtitle: "Experience the pinnacle of luxury living in South Delhi's most prestigious neighborhood.",
+  content: [
+    { heading: "Why Choose Vasant Kunj?", text: "Vasant Kunj is synonymous with luxury, offering a perfect blend of lush green surroundings, top-tier international schools, and unparalleled connectivity to the airport and Gurgaon." },
+    { heading: "Premium Builder Floors", text: "Our independent floors in Vasant Kunj feature stilt parking, private elevators, and bespoke Italian marble interiors. Each floor is designed to maximize natural light and ventilation while ensuring complete privacy." }
+  ]
+};
+
+const mehrauliData = {
+  areaName: "Mehrauli",
+  title: "Premium Independent Floors in Mehrauli | UVSP Buildcon",
+  description: "Discover bespoke independent builder floors in Mehrauli. Heritage living meets modern luxury.",
+  heroSubtitle: "Where centuries of heritage meet contemporary architectural brilliance.",
+  content: [
+    { heading: "The Heritage Advantage", text: "Mehrauli offers a unique living experience where historic monuments provide a breathtaking backdrop to modern luxury. It's one of the few places in Delhi where nature and history coexist seamlessly." },
+    { heading: "Architectural Excellence", text: "UVSP Buildcon’s projects in Mehrauli are designed to respect the local heritage while offering world-class amenities, smart home automation, and earthquake-resistant structures." }
+  ]
+};
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -41,6 +65,11 @@ function AnimatedRoutes() {
         <Route path="/property/:id" element={<ProjectDetail />} />
         <Route path="/portfolio" element={<Project />} />
         <Route path="/admin/leads" element={<LeadsDashboard />} />
+        
+        {/* SEO Area Landing Pages */}
+        <Route path="/builder-floors-vasant-kunj" element={<AreaPage {...vasantKunjData} />} />
+        <Route path="/builder-floors-mehrauli" element={<AreaPage {...mehrauliData} />} />
+        
         {/* Catch-all route for technical SEO and 404 safety */}
         <Route path="*" element={<NotFound />} />
       </Routes>

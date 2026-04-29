@@ -17,7 +17,7 @@ const FinalCTA = () => (
     {/* Subtle background texture */}
     <div style={{
       position: 'absolute', inset: 0,
-      backgroundImage: 'url(/cta-luxury-bg.png)',
+      backgroundImage: 'url(/cta-luxury-bg.webp)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: 0.15,

@@ -38,27 +38,27 @@ const propertyData = {
   'the-crown': {
     title: 'THE CROWN',
     subtitle: 'South Delhi Luxury',
-    hero: '/the-crown-new.png',
+    hero: '/the-crown-new.webp',
     location: 'Vasant Kunj, South Delhi',
     possession: 'Possession July 2027',
     pricing: '₹1.89Cr.',
     desc: 'UVSP presents The Crown, a landmark development redefined for the modern Indian lifestyle. We have meticulously crafted this project to balance timeless South Delhi prestige with contemporary architectural innovation. Every brick and every beam resonates with a commitment to superior Indian craftsmanship.',
     desc2: 'Designed with a focus on Vastu-compliant spaciousness and climate-responsive materials, The Crown is more than just a residence—it is a private sanctuary. Our vision was to create a home that feels both global in its finishing yet deeply rooted in the warmth and heritage of a premium Indian estate.',
     amenities: sharedAmenities,
-    floorPlanImg: '/crown-floorplan.png',
+    floorPlanImg: '/crown-floorplan.webp',
     status: 'construction'
   },
   'ryhan-square': {
     title: 'RYHAN SQUARE',
     subtitle: 'Modern Serenity',
-    hero: '/ryhan-square-new.png',
+    hero: '/ryhan-square-new.webp',
     location: 'Vasant Kunj, South Delhi',
     possession: 'Ready to Move In',
     pricing: '₹1.50Cr.',
     desc: 'Ryhan Square stands as a testament to the evolution of luxury by UVSP. Our approach for this South Delhi gem was to blend robust structural integrity with a sense of quiet tranquility. It is built to serve as a generational asset for families who value quality and modern Indian aesthetics.',
     desc2: 'From the moment you step into the double-height lobbies to the time you spend in your light-filled living quarters, you will feel the precision of Indian master-builders. We have prioritized local premium materials and intelligent spatial planning to deliver a home that is as functional as it is beautiful.',
     amenities: sharedAmenities,
-    floorPlanImg: '/ryhan-floorplan.png',
+    floorPlanImg: '/ryhan-floorplan.webp',
     status: 'ready'
   }
 };
@@ -254,7 +254,7 @@ const ProjectDetail = () => {
       )}
       
       {/* 6. KINETIC PARALLAX CALL TO ACTION */}
-      <section className="cto-statement-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', backgroundImage: 'url(/cta-luxury-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', borderTop: 'none' }}>
+      <section className="cto-statement-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', backgroundImage: 'url(/cta-luxury-bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', borderTop: 'none' }}>
          {/* Premium Dark Overlay */}
          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.75)', zIndex: 1 }} />
          

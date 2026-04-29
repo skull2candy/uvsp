@@ -14,7 +14,7 @@ const About = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <img 
-            src="/philosophy.png" 
+            src="/philosophy.webp" 
             alt="Interior Detail" 
             className="about-image"
           />

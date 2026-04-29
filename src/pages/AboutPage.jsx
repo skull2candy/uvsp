@@ -134,7 +134,7 @@ const AboutPage = () => {
       </section>
 
       {/* 4. KINETIC PARALLAX CALL TO ACTION */}
-      <section className="cto-statement-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', backgroundImage: 'url(/cta-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', borderTop: 'none' }}>
+      <section className="cto-statement-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', backgroundImage: 'url(/cta-bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', borderTop: 'none' }}>
          {/* Premium Dark Overlay */}
          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.65)', zIndex: 1 }} />
          
