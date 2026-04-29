@@ -22,7 +22,7 @@ const NotFound = () => {
         background: 'var(--bg-color)'
       }}
     >
-      <SEO title="Page Not Found" noindex />
+      <SEO title="404 Page Not Found" noindex />
       
       <motion.span 
         className="subtitle" 
