@@ -13,7 +13,27 @@
   <url>
     <loc>https://uvspbuildcon.com/portfolio</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/builder-floors-vasant-kunj</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/builder-floors-mehrauli</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://uvspbuildcon.com/property/the-crown</loc>
@@ -24,16 +44,6 @@
     <loc>https://uvspbuildcon.com/property/ryhan-square</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://uvspbuildcon.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://uvspbuildcon.com/journal</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://uvspbuildcon.com/journal/vasant-kunj-luxury-3bhk</loc>
@@ -67,8 +77,8 @@
   </url>
   <url>
     <loc>https://uvspbuildcon.com/journal/builder-floors-south-delhi-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://uvspbuildcon.com/journal/buy-property-vasant-kunj</loc>
@@ -77,6 +87,111 @@
   </url>
   <url>
     <loc>https://uvspbuildcon.com/journal/luxury-homes-family-guide-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/understanding-circle-rates-south-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/rera-registered-builder-delhi-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/legal-checklist-independent-floor-new-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/nri-property-investment-india-tax</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/luxury-builder-floor-amenities-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/best-builders-in-vasant-kunj-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/rental-yield-south-delhi-roi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/per-sq-ft-rate-vasant-kunj</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/gated-community-chhatarpur-living</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/eco-friendly-luxury-homes-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/earthquake-resistant-homes-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/parking-rules-builder-floor-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/property-handover-process</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/nri-investment-south-delhi-roi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/best-schools-south-delhi-vasant-kunj</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/quiet-localities-south-delhi-retirees</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/builder-floor-with-terrace-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/luxury-interior-design-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/4bhk-builder-floor-saket-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/luxury-property-definition-delhi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uvspbuildcon.com/journal/the-crown-vasant-kunj-walkthrough</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

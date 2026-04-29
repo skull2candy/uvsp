@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "start:fullstack": "concurrently \"npm run dev\" \"node server/index.js\"",
-    "build": "vite build",
+    "build": "node generate-sitemap.js && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "postbuild": "node prerender.js"
