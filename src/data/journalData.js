@@ -148,7 +148,7 @@ export const journalData = [
       <p><strong>Vasant Kunj property prices</strong> have appreciated 12–15% year-on-year, consistently outperforming other Delhi micro-markets. The area is characterized by wide, tree-lined avenues, forest-facing plots, and a socioeconomic profile that ensures permanent demand and value retention.</p>
 
       <h2>Best Projects in Vasant Kunj</h2>
-      <p>UVSP Buildcon's flagship project <strong>The Crown</strong> is located in the heart of Vasant Kunj. Available from ₹1.89 Cr, it offers 3BHK luxury residences with double-height lobbies, elite interiors, and world-class amenities — all designed to the exacting standards of India's top architectural studios.</p>
+      <p>UVSP Buildcon's flagship project <strong>The Crown</strong> is located in the heart of Vasant Kunj. Available from ₹1.99 Cr, it offers 3BHK luxury residences with double-height lobbies, elite interiors, and world-class amenities — all designed to the exacting standards of India's top architectural studios.</p>
 
       <h2>Is Now a Good Time to Invest?</h2>
       <p>With limited land availability and consistent demand from NRI buyers, diplomats, and high-income professionals, <strong>investing in Vasant Kunj real estate</strong> today means securing a generational asset at current prices before the next wave of appreciation.</p>

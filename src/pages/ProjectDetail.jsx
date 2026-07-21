@@ -41,7 +41,7 @@ const propertyData = {
     hero: '/the-crown-new.webp',
     location: 'Vasant Kunj, South Delhi',
     possession: 'Possession July 2027',
-    pricing: '₹1.89Cr.',
+    pricing: '₹1.99Cr.',
     desc: 'UVSP presents The Crown, a landmark development redefined for the modern Indian lifestyle. We have meticulously crafted this project to balance timeless South Delhi prestige with contemporary architectural innovation. Every brick and every beam resonates with a commitment to superior Indian craftsmanship.',
     desc2: 'Designed with a focus on Vastu-compliant spaciousness and climate-responsive materials, The Crown is more than just a residence—it is a private sanctuary. Our vision was to create a home that feels both global in its finishing yet deeply rooted in the warmth and heritage of a premium Indian estate.',
     amenities: sharedAmenities,
