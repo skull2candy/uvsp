@@ -1,22 +1,31 @@
 :root {
-  /* Day Theme (Default Light/Beige Marble) */
-  --bg-color: #F9F8F6;
-  --text-color: #22201F;
-  --accent-color: #A99260; /* Muted Elegant Gold */
-  --surface-color: #F1EFEA;
-  --border-color: #E2DDD5;
-  --hero-overlay: rgba(249, 248, 246, 0.3);
+  /* Ultra-Luxury Obsidian & Bronze Gold Palette */
+  --bg-color: #080808;
+  --surface-color: #111111;
+  --surface-elevated: #181818;
+  --text-color: #F3F1EC;
+  --text-muted: #9E9B93;
+  --accent-color: #C5A880; /* Warm Brushed Bronze Gold */
+  --accent-light: #E0CFA9;
+  --accent-glow: rgba(197, 168, 128, 0.18);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(197, 168, 128, 0.35);
+  --hero-overlay: rgba(8, 8, 8, 0.72);
   --logo-filter: none;
 }
 
 [data-theme='dark'] {
-  /* Night Theme (Dark Marble with Bronze veins) */
-  --bg-color: #0A0A0A;
-  --text-color: #E0E0E0;
-  --accent-color: #C8B082; /* Bronze Gold */
-  --surface-color: #141414;
-  --border-color: #262626;
-  --hero-overlay: rgba(10, 10, 10, 0.65);
+  --bg-color: #080808;
+  --surface-color: #111111;
+  --surface-elevated: #181818;
+  --text-color: #F3F1EC;
+  --text-muted: #9E9B93;
+  --accent-color: #C5A880;
+  --accent-light: #E0CFA9;
+  --accent-glow: rgba(197, 168, 128, 0.18);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(197, 168, 128, 0.35);
+  --hero-overlay: rgba(8, 8, 8, 0.72);
 }
 
 * {
@@ -28,17 +37,34 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.8s ease, color 0.8s ease;
   overflow-x: clip;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+}
+
+/* Subtle architectural grain / glow background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(197, 168, 128, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 15% 75%, rgba(197, 168, 128, 0.03) 0%, transparent 45%);
+  z-index: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
 }
 
 a {
@@ -54,39 +80,32 @@ button {
   font-family: 'Inter', sans-serif;
 }
 
-/* Base Utility Classes */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 36px;
-  background-color: transparent;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
+/* Gold Gradient Typography */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF6E5 0%, #C5A880 50%, #8F764F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.btn:hover {
-  background-color: var(--text-color);
-  color: var(--bg-color);
+/* Hairline Gold Divider */
+.gold-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(197, 168, 128, 0.4) 50%, transparent 100%);
+  margin: 2rem 0;
 }
 
-.btn-solid {
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  color: #fff;
+/* Subtle Luxury Glass Surface */
+.luxury-glass {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-.btn-solid:hover {
-  background-color: transparent;
-  color: var(--accent-color);
+.luxury-glass:hover {
+  border-color: rgba(197, 168, 128, 0.3);
 }
 
 /* ═══════════════════════════════════════════════════

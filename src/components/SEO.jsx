@@ -81,6 +81,12 @@ const SEO = ({
         "position": 2,
         "name": "Premium Independent Floors in Mehrauli",
         "url": `${SITE_URL}/property/ryhan-square`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Whispering Pines 3 BHK Luxury Society Jaunapur",
+        "url": `${SITE_URL}/property/whispering-pines`
       }
     ]
   };

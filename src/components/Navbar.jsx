@@ -1,10 +1,10 @@
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = () => {
   const { scrollY } = useScroll();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,24 +41,35 @@ const Navbar = ({ theme, toggleTheme }) => {
           <div className="nav-desktop">
             <Link to="/about" className="menu-btn">ABOUT</Link>
             <div className="nav-dropdown">
-              <span className="menu-btn dropdown-toggle">EXPLORE</span>
+              <span className="menu-btn dropdown-toggle">PORTFOLIO</span>
               <div className="dropdown-menu">
-                <Link to="/portfolio" className="dropdown-link">Portfolio</Link>
-                <Link to="/property/the-crown" className="dropdown-link">The Crown</Link>
-                <Link to="/property/ryhan-square" className="dropdown-link">Ryhan Square</Link>
+                <Link to="/portfolio" className="dropdown-link dropdown-header-link">
+                  <span>All Projects</span>
+                  <span className="dropdown-badge">Overview</span>
+                </Link>
+                <div className="dropdown-separator" />
+                <Link to="/property/whispering-pines" className="dropdown-link">
+                  <span className="dropdown-item-title">Whispering Pines</span>
+                  <span className="dropdown-item-sub">Jaunapur · 3 BHK</span>
+                </Link>
+                <Link to="/property/the-crown" className="dropdown-link">
+                  <span className="dropdown-item-title">The Crown</span>
+                  <span className="dropdown-item-sub">Vasant Kunj · 3 BHK</span>
+                </Link>
+                <Link to="/property/ryhan-square" className="dropdown-link">
+                  <span className="dropdown-item-title">Ryhan Square</span>
+                  <span className="dropdown-item-sub">Vasant Kunj · 3 BHK</span>
+                </Link>
               </div>
             </div>
             <Link to="/journal" className="menu-btn">JOURNAL</Link>
-            <Link to="/contact" className="menu-btn">CONTACT</Link>
-            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
-              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-            </button>
+            <Link to="/contact" className="nav-cta-btn">
+              <span className="nav-cta-dot" />
+              <span>BOOK VISIT</span>
+            </Link>
           </div>
 
           <div className="nav-mobile-controls">
-            <button className="theme-toggle" onClick={toggleTheme} style={{marginRight: '1rem'}}>
-              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-            </button>
             <button className="hamburger-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

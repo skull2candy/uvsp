@@ -14,7 +14,7 @@ const PriceUnlockModal = ({ isOpen, onClose, propertyName, onUnlock }) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch('/api/leads', {
+      await fetch('/api/leads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,16 +25,12 @@ const PriceUnlockModal = ({ isOpen, onClose, propertyName, onUnlock }) => {
           property_interest: propertyName,
         }),
       });
-
-      if (response.ok) {
-        onUnlock();
-        onClose();
-      }
     } catch (error) {
-      console.error('Error unlocking price:', error);
-      alert('Technical error. Please try again.');
+      console.warn('Leads endpoint unavailable, proceeding to unlock price locally:', error);
     } finally {
       setIsSubmitting(false);
+      onUnlock();
+      onClose();
     }
   };
 

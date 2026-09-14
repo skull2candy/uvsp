@@ -27,7 +27,7 @@ import AreaPage from './pages/AreaPage';
 const vasantKunjData = {
   areaName: "Vasant Kunj",
   title: "Luxury Builder Floors in Vasant Kunj | UVSP Buildcon",
-  description: "Explore ultra-luxury builder floors in Vasant Kunj. 4BHK premium residences crafted by UVSP Buildcon.",
+  description: "Explore ultra-luxury builder floors in Vasant Kunj. 3BHK premium residences crafted by UVSP Buildcon.",
   heroSubtitle: "Experience the pinnacle of luxury living in South Delhi's most prestigious neighborhood.",
   content: [
     { heading: "Why Choose Vasant Kunj?", text: "Vasant Kunj is synonymous with luxury, offering a perfect blend of lush green surroundings, top-tier international schools, and unparalleled connectivity to the airport and Gurgaon." },
@@ -78,17 +78,9 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'dark');
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -119,7 +111,7 @@ function App() {
         <PageLoader />
         <ScrollProgress />
         <CursorGlow />
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Navbar />
         <main>
           <AnimatedRoutes />
         </main>

@@ -74,8 +74,9 @@ const Contact = () => {
             <div className="form-group">
               <select id="project" className="luxury-input" required>
                 <option value="" disabled selected hidden>PROJECT INTEREST</option>
-                <option value="ryhan-square">Ryhan Square</option>
-                <option value="the-crown">The Crown</option>
+                <option value="whispering-pines">Whispering Pines (Jaunapur)</option>
+                <option value="the-crown">The Crown (Vasant Kunj)</option>
+                <option value="ryhan-square">Ryhan Square (Vasant Kunj)</option>
                 <option value="other">Other / General</option>
               </select>
             </div>

@@ -52,15 +52,15 @@ const MediaItem = ({ item, isActive, onMouseEnter }) => {
   );
 };
 
-const Gallery = () => {
-  // We default to centering the active state on the 7th item (index 6) to make it look balanced initially
-  const [activeIndex, setActiveIndex] = useState(6);
+const Gallery = ({ items = galleryItems, title = "Ryhan Curations", subtitle = "A Visual Journey" }) => {
+  // Center active state on the middle item
+  const [activeIndex, setActiveIndex] = useState(Math.floor((items.length - 1) / 2));
 
   return (
     <section className="gallery-masterpiece">
       <div className="container" style={{textAlign: 'center', marginBottom: '4rem'}}>
-         <span className="subtitle" style={{letterSpacing: '0.4em'}}>A Visual Journey</span>
-         <h2 className="heading-secondary" style={{fontSize: 'clamp(3rem, 6vw, 5rem)'}}>Ryhan Curations</h2>
+         <span className="subtitle" style={{letterSpacing: '0.4em'}}>{subtitle}</span>
+         <h2 className="heading-secondary" style={{fontSize: 'clamp(3rem, 6vw, 5rem)'}}>{title}</h2>
       </div>
 
       <motion.div 
@@ -70,7 +70,7 @@ const Gallery = () => {
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true, margin: "-10%" }}
       >
-        {galleryItems.map((item, index) => (
+        {items.map((item, index) => (
           <MediaItem 
             key={index} 
             item={item} 

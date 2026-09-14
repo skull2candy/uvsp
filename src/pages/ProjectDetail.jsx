@@ -13,7 +13,12 @@ import {
   Layout, 
   Baby, 
   Fence, 
-  MapPin 
+  MapPin,
+  Trees,
+  Wine,
+  Coffee,
+  Droplets,
+  Sparkles
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import Gallery from '../components/Gallery';
@@ -32,6 +37,19 @@ const sharedAmenities = [
   { icon: <Baby size={24} strokeWidth={1} />, title: 'KIDS ZONE' },
   { icon: <Fence size={24} strokeWidth={1} />, title: 'GATED SOCIETY' },
   { icon: <MapPin size={24} strokeWidth={1} />, title: 'METRO CONNECTIVITY 0KM' }
+];
+
+const whisperingAmenities = [
+  { icon: <Waves size={24} strokeWidth={1} />, title: 'SIGNATURE POOL & CLUBHOUSE' },
+  { icon: <Dumbbell size={24} strokeWidth={1} />, title: 'ELITE FITNESS STUDIO' },
+  { icon: <Sparkles size={24} strokeWidth={1} />, title: 'KIDS ADVENTURE ZONE' },
+  { icon: <Trees size={24} strokeWidth={1} />, title: 'SKY TERRACE BOTANICAL' },
+  { icon: <Wine size={24} strokeWidth={1} />, title: 'PRIVATE SOCIAL LOUNGE' },
+  { icon: <Coffee size={24} strokeWidth={1} />, title: 'GRAND RECEPTION LOBBY' },
+  { icon: <ShieldCheck size={24} strokeWidth={1} />, title: 'SMART SECURITY GATEWAY' },
+  { icon: <Car size={24} strokeWidth={1} />, title: 'STILT & SCOOTER PARKING' },
+  { icon: <Droplets size={24} strokeWidth={1} />, title: '24-HR WATER SUPPLY' },
+  { icon: <MapPin size={24} strokeWidth={1} />, title: 'JAUNAPUR / MANDI RD CORRIDOR' }
 ];
 
 const propertyData = {
@@ -60,13 +78,38 @@ const propertyData = {
     amenities: sharedAmenities,
     floorPlanImg: '/ryhan-floorplan.webp',
     status: 'ready'
+  },
+  'whispering-pines': {
+    title: 'WHISPERING PINES',
+    subtitle: 'Where Nature Whispers Peace Across Majestic Pine Groves',
+    hero: '/whispering-pines-hero.webp',
+    location: 'Jaunapur, South Delhi (Near Mandi Road)',
+    possession: 'Under Construction',
+    pricing: '₹ 1.75 Cr.',
+    desc: 'Whispering Pines is a premier 3 BHK luxury society situated in the peaceful greenery of Jaunapur, South Delhi, directly accessible from Mandi Road and the Chattarpur corridor. Designed around majestic pine groves, it represents the ideal convergence of natural tranquility and modern architectural opulence.',
+    desc2: 'Crafted with designer false ceilings, and a fully modular kitchen fitted with branded Elica/Kaff chimney, Kent RO, and Havells fixtures. Features a private clubhouse with swimming pool, fitness studio, sky terrace botanical garden, and 24x7 smart gated security.',
+    amenities: whisperingAmenities,
+    floorPlanImg: '/whispering-pines-floorplan.webp',
+    masterPlanImg: '/whispering-pines-masterplan.webp',
+    locationMapImg: '/whispering-pines-location.webp',
+    status: 'construction',
+    galleryItems: [
+      { src: '/whispering-gallery/balcony.webp', type: 'image' },
+      { src: '/whispering-gallery/living.webp', type: 'image' },
+      { src: '/whispering-gallery/bedroom.webp', type: 'image' },
+      { src: '/whispering-gallery/dining.webp', type: 'image' },
+      { src: '/whispering-gallery/kitchen.webp', type: 'image' },
+      { src: '/whispering-gallery/bathroom.webp', type: 'image' }
+    ]
   }
 };
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const data = propertyData[id];
-  const [isPriceRevealed, setIsPriceRevealed] = useState(false);
+  const [isPriceRevealed, setIsPriceRevealed] = useState(() => {
+    return typeof window !== 'undefined' && sessionStorage.getItem(`unlocked_${id}`) === 'true';
+  });
   const [isModalOpen, setIsModalOpen] = useState(false);
   
   const { scrollY } = useScroll();
@@ -232,7 +275,7 @@ const ProjectDetail = () => {
          <div className="container">
             <div style={{marginBottom: '5rem', maxWidth: '600px'}}>
               <span className="subtitle">The Architecture</span>
-              <h2 className="heading-secondary">Master Floor Plan</h2>
+              <h2 className="heading-secondary">{data.masterPlanImg ? 'Architectural Floor Plan' : 'Master Floor Plan'}</h2>
             </div>
             <motion.div 
               className="floor-plan-container"
@@ -243,13 +286,34 @@ const ProjectDetail = () => {
             >
                <img src={data.floorPlanImg} alt="Floor Plan" />
             </motion.div>
+
+            {data.masterPlanImg && (
+              <div style={{marginTop: '6rem'}}>
+                <div style={{marginBottom: '3rem', maxWidth: '600px'}}>
+                  <span className="subtitle">Site Enclave</span>
+                  <h2 className="heading-secondary">Master Site Plan</h2>
+                </div>
+                <motion.div 
+                  className="floor-plan-container master-plan-colored"
+                  initial={{opacity: 0, scale: 0.98}}
+                  whileInView={{opacity: 1, scale: 1}}
+                  viewport={{once: true}}
+                  transition={{duration: 1.2, ease: [0.16, 1, 0.3, 1]}}
+                >
+                   <img src={data.masterPlanImg} alt="Master Site Plan" />
+                </motion.div>
+              </div>
+            )}
          </div>
       </section>
 
       {/* 5. PHOTO GALLERY */}
       {id !== 'the-crown' && (
         <div style={{paddingTop: '6rem'}}>
-          <Gallery />
+          <Gallery 
+            items={data.galleryItems} 
+            title={id === 'whispering-pines' ? 'Whispering Pines Exhibits' : 'Ryhan Curations'} 
+          />
         </div>
       )}
       
@@ -289,7 +353,10 @@ const ProjectDetail = () => {
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
         propertyName={data.title}
-        onUnlock={() => setIsPriceRevealed(true)}
+        onUnlock={() => {
+          setIsPriceRevealed(true);
+          try { sessionStorage.setItem(`unlocked_${id}`, 'true'); } catch (e) {}
+        }}
       />
     </motion.div>
   );

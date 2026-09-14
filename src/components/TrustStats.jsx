@@ -40,15 +40,17 @@ const CountUp = ({ target, suffix }) => {
 
 const TrustStats = () => (
   <section style={{
-    background: 'var(--surface-color)',
-    borderTop: '1px solid var(--border-color)',
-    borderBottom: '1px solid var(--border-color)',
-    padding: '5rem 0',
+    background: '#0D0D0D',
+    borderTop: '1px solid rgba(197, 168, 128, 0.2)',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
+    padding: '4.5rem 0',
+    position: 'relative',
   }}>
     <div className="container" style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
-      gap: '2rem',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+      gap: '2.5rem',
+      alignItems: 'center',
     }}>
       {stats.map((stat, i) => (
         <motion.div
@@ -56,27 +58,32 @@ const TrustStats = () => (
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-          style={{ textAlign: 'center' }}
+          transition={{ duration: 0.8, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+          style={{ 
+            textAlign: 'center',
+            position: 'relative',
+            padding: '1rem',
+          }}
         >
           <div style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-            color: 'var(--accent-color)',
+            fontSize: 'clamp(2.8rem, 5.5vw, 4.2rem)',
+            color: '#FFFFFF',
             lineHeight: 1,
             fontWeight: 400,
-            letterSpacing: '-0.02em',
+            letterSpacing: '-0.03em',
+            textShadow: '0 4px 20px rgba(197, 168, 128, 0.15)',
           }}>
             <CountUp target={stat.value} suffix={stat.suffix} />
           </div>
           <div style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '0.75rem',
-            letterSpacing: '0.12em',
+            fontFamily: 'Inter',
+            fontSize: '0.68rem',
+            letterSpacing: '0.22em',
             textTransform: 'uppercase',
-            color: 'var(--text-color)',
-            opacity: 0.6,
-            marginTop: '0.75rem',
+            color: 'var(--accent-color)',
+            fontWeight: 600,
+            marginTop: '0.85rem',
           }}>
             {stat.label}
           </div>

@@ -73,7 +73,7 @@ const ContactPage = () => {
         </motion.div>
 
         {/* THE FORM CORE */}
-        <motion.div initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{delay:0.8, duration: 1, ease: [0.16, 1, 0.3, 1]}} style={{width: '100%', maxWidth: '600px'}}>
+        <motion.div initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{delay:0.8, duration: 1, ease: [0.16, 1, 0.3, 1]}} style={{width: '100%', maxWidth: '640px'}}>
            <AnimatePresence mode="wait">
              {!isSent ? (
                <motion.form key="form" className="elite-form" onSubmit={handleSubmit} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, filter: 'blur(10px)'}}>
@@ -84,14 +84,50 @@ const ContactPage = () => {
                     <input type="email" className="luxury-input" placeholder="Email Address" required />
                  </div>
                  <div className="form-group">
-                    <input type="text" className="luxury-input" placeholder="Phone Number (Optional)" />
+                    <input type="tel" className="luxury-input" placeholder="Phone Number / WhatsApp (+91 ...)" required />
                  </div>
+
+                 {/* Property Interest Selector */}
+                 <div style={{ textAlign: 'left', margin: '1.5rem 0 1rem' }}>
+                   <label className="label-text" style={{ color: 'var(--accent-color)', marginBottom: '0.75rem', fontSize: '0.65rem' }}>
+                     SELECT PROJECT OF INTEREST
+                   </label>
+                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                     {['Whispering Pines (Jaunapur)', 'The Crown (Vasant Kunj)', 'Ryhan Square (South Delhi)', 'General Consultation'].map((proj, idx) => (
+                       <span key={idx} style={{
+                         fontSize: '0.7rem',
+                         padding: '6px 14px',
+                         borderRadius: '9999px',
+                         background: 'rgba(255, 255, 255, 0.04)',
+                         border: '1px solid rgba(197, 168, 128, 0.25)',
+                         color: '#E0DDD5',
+                         cursor: 'pointer',
+                         transition: 'all 0.3s ease'
+                       }}>
+                         {proj}
+                       </span>
+                     ))}
+                   </div>
+                 </div>
+
                  <div className="form-group">
-                    <textarea rows="1" className="luxury-input" placeholder="How can we assist you?" required style={{resize: 'none'}}></textarea>
+                    <textarea rows="2" className="luxury-input" placeholder="Tell us about your architectural requirements, timeline, or investment goals..." required style={{resize: 'none'}}></textarea>
                  </div>
-                 <button type="submit" className="btn luxury-submit-btn w-full" style={{marginTop: '3rem'}}>
-                   Request Consultation
+                 <button type="submit" className="btn luxury-submit-btn w-full" style={{marginTop: '2.5rem', width: '100%', borderRadius: '9999px'}}>
+                   Request Private Consultation
                  </button>
+
+                 <div style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                   <span style={{ fontSize: '0.75rem', color: '#888' }}>Need an instant response?</span>
+                   <a 
+                     href="https://wa.me/918800589785" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     style={{ fontSize: '0.75rem', color: 'var(--accent-color)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
+                   >
+                     <MessageCircle size={14} /> WhatsApp Concierge (Live)
+                   </a>
+                 </div>
                </motion.form>
              ) : (
                <motion.div key="success" className="elite-success-state" initial={{opacity: 0, scale: 0.9}} animate={{opacity: 1, scale: 1}} transition={{duration: 0.8, ease: [0.16, 1, 0.3, 1]}}>

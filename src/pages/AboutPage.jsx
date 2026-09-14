@@ -121,7 +121,7 @@ const AboutPage = () => {
                     <img src="/satya.png" alt="Director Satya Pandey" onError={(e) => { e.target.src = '/hero.png' }} />
                  </div>
                  <motion.div className="z-text-box left-overlap" initial={{opacity:0, x:-50}} whileInView={{opacity:1, x:0}} viewport={{once:true}} transition={{duration:1, delay:0.3}}>
-                   <span className="label-text" style={{color: 'var(--accent-color)', marginBottom: '1rem'}}>Executive Director</span>
+                   <span className="label-text" style={{color: 'var(--accent-color)', marginBottom: '1rem'}}>Managing Director</span>
                    <h3 className="heading-secondary" style={{marginBottom: '2rem', fontSize: '3rem', whiteSpace: 'nowrap'}}>Satya Pandey</h3>
                    <p className="body-text-large">
                      Satya brings ruthless precision and infrastructural authority to the board. By synergizing elite development networks with rigorous engineering frameworks, he guarantees that every UVSP monolithic structure is built to endure seamlessly across centuries.

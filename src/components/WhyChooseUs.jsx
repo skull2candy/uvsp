@@ -90,12 +90,15 @@ const WhyChooseUs = () => {
                 <div className="panel-bg" style={{ backgroundImage: `url(${feature.bgImage})` }}></div>
                 <div className="panel-overlay"></div>
 
+                {/* Step Watermark */}
+                <span className="panel-watermark">0{feature.id}</span>
+
                 {/* Content Container */}
                 <motion.div className="panel-content" layout="position">
                   <motion.div 
                     className="panel-icon-wrap"
                     animate={isActive ? { 
-                      y: [0, -5, 0],
+                      y: [0, -4, 0],
                       transition: { duration: 3, repeat: Infinity, ease: "easeInOut" }
                     } : {}}
                   >
@@ -103,6 +106,7 @@ const WhyChooseUs = () => {
                   </motion.div>
                   
                   <motion.div className="panel-text-block" layout="position">
+                    <span className="panel-sub-label">PILLAR 0{feature.id}</span>
                     <h3 className="panel-title">{feature.title}</h3>
                     
                     <motion.p 
@@ -111,7 +115,7 @@ const WhyChooseUs = () => {
                       animate={{ 
                         opacity: isActive ? 1 : 0, 
                         height: isActive ? 'auto' : 0,
-                        marginTop: isActive ? '1rem' : 0
+                        marginTop: isActive ? '0.75rem' : 0
                       }}
                       transition={{ duration: 0.4 }}
                     >
