@@ -19,6 +19,15 @@ const AreaPage = ({ areaName, title, description, keywords, heroSubtitle, conten
         title={title}
         description={description}
         canonical={`/builder-floors-${areaName.toLowerCase().replace(' ', '-')}`}
+        image="/the-crown-new.webp"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: `Builder Floors in ${areaName}`, url: `/builder-floors-${areaName.toLowerCase().replace(' ', '-')}` }
+        ]}
+        faq={content.map(sec => ({
+          question: sec.heading,
+          answer: sec.text
+        }))}
       />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-20">

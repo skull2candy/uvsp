@@ -139,8 +139,14 @@ const Project = () => {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-wrapper">
       <SEO 
-        title="Bespoke Portfolio | UVSP Buildcon" 
-        description="Explore our curated collection of luxury residential developments across South Delhi, from Vasant Kunj to Jaunapur." 
+        title="Luxury Builder Floors &amp; Societies Portfolio in South Delhi" 
+        description="Explore our curated collection of luxury 3 BHK residential developments across South Delhi, from Vasant Kunj to Jaunapur. 50+ delivered architectural landmarks." 
+        canonical="/portfolio"
+        image="/the-crown-new.webp"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Portfolio", url: "/portfolio" }
+        ]}
       />
 
       {/* ── CINEMATIC PORTFOLIO HERO HEADER ── */}

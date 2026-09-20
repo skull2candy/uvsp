@@ -144,7 +144,23 @@ const ProjectDetail = () => {
 
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-wrapper">
-      <SEO title={data.title} description={data.desc} />
+      <SEO 
+        title={`${data.title} — 3 BHK Luxury Residences in ${data.location}`}
+        description={`${data.desc} ${data.desc2}`.substring(0, 160)}
+        canonical={`/property/${id}`}
+        image={data.hero}
+        property={{
+          title: data.title,
+          description: data.desc,
+          locality: data.location,
+          price: id === 'whispering-pines' ? '17500000' : (id === 'the-crown' ? '19900000' : '15000000')
+        }}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Portfolio", url: "/portfolio" },
+          { name: data.title, url: `/property/${id}` }
+        ]}
+      />
       
       {/* 1. HERO SECTION */}
       <section className="ultra-hero" style={{overflow: 'hidden'}}>

@@ -23,7 +23,15 @@ const ArticleDetail = () => {
       <SEO 
         title={article.title} 
         description={article.excerpt} 
+        canonical={`/journal/${article.id}`}
+        image={article.image}
         type="article"
+        article={true}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Journal", url: "/journal" },
+          { name: article.title, url: `/journal/${article.id}` }
+        ]}
       />
       
       {/* ARTICLE HERO */}

@@ -90,10 +90,19 @@ const Footer = () => {
               <motion.div variants={itemVariants} className="f-nav-col">
                  <span className="f-label">Navigation</span>
                  <nav className="f-nav-list">
-                    <KineticLink to="/" label="Portfolio" />
+                    <KineticLink to="/portfolio" label="Portfolio" />
                     <KineticLink to="/about" label="The Philosophy" />
                     <KineticLink to="/journal" label="Editorial Journal" />
                     <KineticLink to="/contact" label="Private Advisory" />
+                 </nav>
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="f-nav-col">
+                 <span className="f-label">Corridors</span>
+                 <nav className="f-nav-list">
+                    <KineticLink to="/builder-floors-jaunapur" label="Jaunapur" />
+                    <KineticLink to="/builder-floors-vasant-kunj" label="Vasant Kunj" />
+                    <KineticLink to="/builder-floors-mehrauli" label="Mehrauli" />
                  </nav>
               </motion.div>
 

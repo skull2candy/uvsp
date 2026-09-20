@@ -16,8 +16,14 @@ const JournalPage = () => {
       style={{paddingTop: '10rem', backgroundColor: 'var(--bg-color)', minHeight: '100vh'}}
     >
       <SEO 
-        title="Journal & Market Insights" 
-        description="Explore the latest architectural insights, market trends, and luxury property real estate related updates around Vasant Kunj, Mehrauli, and New Delhi." 
+        title="Journal &amp; South Delhi Luxury Real Estate Market Insights" 
+        description="Explore the latest architectural insights, circle rate guides, and luxury property real estate updates across Vasant Kunj, Jaunapur, Mehrauli, and South Delhi." 
+        canonical="/journal"
+        image="/the-crown-new.webp"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Journal", url: "/journal" }
+        ]}
       />
       <div className="container">
          <motion.span className="subtitle" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}}>The Archives</motion.span>

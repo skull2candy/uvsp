@@ -46,6 +46,18 @@ const mehrauliData = {
   ]
 };
 
+const jaunapurData = {
+  areaName: "Jaunapur",
+  title: "Luxury 3 BHK Builder Floors & Society in Jaunapur | UVSP Buildcon",
+  description: "Discover premium 3 BHK builder floors and luxury societies in Jaunapur, South Delhi along Mandi Road & Chattarpur corridor. High appreciation and peaceful green living.",
+  heroSubtitle: "Where lush pine groves and serene living converge with South Delhi's premier connectivity.",
+  content: [
+    { heading: "Why Invest in Jaunapur?", text: "Jaunapur is emerging as South Delhi's most sought-after green sanctuary. Situated directly along Mandi Road with rapid access to the Chattarpur metro corridor and Gurgaon, Jaunapur combines clean air, peaceful surroundings, and exponential property value appreciation." },
+    { heading: "Whispering Pines — Flagship 3 BHK Luxury Living", text: "Featuring our signature development Whispering Pines, residences in Jaunapur offer covered and stilt parking, private clubhouse with swimming pool, gym, sky terrace botanical gardens, and 24x7 gated security." },
+    { heading: "Connectivity & Infrastructure", text: "Positioned close to premier South Delhi institutions, international schools, golf courses, and diplomatic corridors, Jaunapur delivers unmatched tranquility without sacrificing metropolitan convenience." }
+  ]
+};
+
 function AnimatedRoutes() {
   const location = useLocation();
   
@@ -69,6 +81,7 @@ function AnimatedRoutes() {
         {/* SEO Area Landing Pages */}
         <Route path="/builder-floors-vasant-kunj" element={<AreaPage {...vasantKunjData} />} />
         <Route path="/builder-floors-mehrauli" element={<AreaPage {...mehrauliData} />} />
+        <Route path="/builder-floors-jaunapur" element={<AreaPage {...jaunapurData} />} />
         
         {/* Catch-all route for technical SEO and 404 safety */}
         <Route path="*" element={<NotFound />} />

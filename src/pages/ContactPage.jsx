@@ -50,9 +50,14 @@ const ContactPage = () => {
       style={{position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', paddingTop: '10rem', paddingBottom: '6rem'}}
     >
       <SEO 
-        title="Contact UVSP Buildcon | Book Site Visit South Delhi" 
-        description="Contact UVSP Buildcon for luxury homes, premium builder floors, and exclusive real estate opportunities in South Delhi, Vasant Kunj, and Mehrauli. Book a site visit today." 
+        title="Contact UVSP Buildcon — Book Private Site Visit in South Delhi" 
+        description="Connect with UVSP Buildcon for luxury homes, 3 BHK builder floors, and bespoke real estate developments in Vasant Kunj, Jaunapur, and Mehrauli. Schedule a private viewing." 
         canonical="/contact"
+        image="/the-crown-new.webp"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Contact", url: "/contact" }
+        ]}
       />
       {/* EXTREME LUXURY TEXTURE WATERMARK */}
       <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, overflow: 'hidden', pointerEvents: 'none'}}>
