@@ -142,7 +142,7 @@ const Project = () => {
         title="Luxury Builder Floors &amp; Societies Portfolio in South Delhi" 
         description="Explore our curated collection of luxury 3 BHK residential developments across South Delhi, from Vasant Kunj to Jaunapur. 50+ delivered architectural landmarks." 
         canonical="/portfolio"
-        image="/the-crown-new.webp"
+        image="/main-hero.webp"
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Portfolio", url: "/portfolio" }
@@ -189,7 +189,7 @@ const Project = () => {
           >
             <button className="portfolio-jump-pill" onClick={() => scrollToSection(section1Ref)}>
               <span className="pill-index">01</span>
-              <span>The Crown • Vasant Kunj</span>
+              <span>The Crown</span>
             </button>
             <button className="portfolio-jump-pill" onClick={() => scrollToSection(section2Ref)}>
               <span className="pill-index">02</span>
@@ -197,7 +197,7 @@ const Project = () => {
             </button>
             <button className="portfolio-jump-pill" onClick={() => scrollToSection(section3Ref)}>
               <span className="pill-index">03</span>
-              <span>Whispering Pines • Jaunapur</span>
+              <span>Whispering Pines</span>
             </button>
           </motion.div>
 
@@ -229,24 +229,20 @@ const Project = () => {
           <div className="project-watermark-num">01</div>
           
           <div className="sticky-left">
-            <motion.img 
-              src="/the-crown-new.webp" 
-              alt="The Crown" 
-              className="sticky-image" 
-              style={{ y: y1, scale: scale1 }}
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.8 }}
-            />
-            <div style={{position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', zIndex: 10}}>
-               <motion.div 
-                 className="status-badge badge-construction"
-                 initial={{ opacity: 0, y: 10 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.6, delay: 0.3 }}
-               >
-                  <span className="status-dot"></span> Under Construction
-               </motion.div>
+            <div className="masked-portfolio-visual">
+              <motion.div 
+                className="masked-visual-inner"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="masked-emblem">
+                  <KeyRound size={28} strokeWidth={1.5} />
+                </div>
+                <span className="masked-emblem-tag">CONFIDENTIAL PORTFOLIO</span>
+                <h3 className="masked-emblem-title">THE CROWN</h3>
+              </motion.div>
             </div>
          </div>
 
@@ -261,82 +257,19 @@ const Project = () => {
                />
                <span className="subtitle" style={{ letterSpacing: '0.3em' }}>PROPOSAL 01</span>
                <h2 className="heading-primary" style={{fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', margin: '0.5rem 0'}}>THE CROWN</h2>
-               <span className="label-text" style={{display:'flex', alignItems: 'center', gap: '0.5rem'}}>
-                 <MapPin size={14} color="var(--accent-color)" /> Vasant Kunj, South Delhi
-               </span>
             </motion.div>
             
             <motion.div {...textFadeIn} transition={{ delay: 0.2, duration: 1 }} className="project-body">
-              <h3 className="heading-secondary" style={{fontSize: '1.8rem', marginBottom: '1.2rem'}}>Royal Elegance Reimagined.</h3>
-              <p className="body-text-large">
-                The Crown represents the pinnacle of regal architecture harmonized with modern minimalism. Sourced with the finest ivory marble, both the exterior facade and the inner sanctums resonate with singular, quiet prestige.
+              <p className="body-text-large" style={{ color: 'var(--text-muted)', marginBottom: '2.5rem', lineHeight: '1.8' }}>
+                All architectural specifications, blueprints, and acquisitions for this development are currently private under an exclusive marketing embargo. Direct accredited inquiries only.
               </p>
-              <div style={{marginTop: '2.5rem'}}>
+              <div>
                 <Link to="/property/the-crown" className="btn-project-cta">
-                  <span>Explore The Crown</span>
+                  <span>Inquire About The Crown</span>
                   <ArrowUpRight size={18} className="cta-arrow" />
                 </Link>
               </div>
             </motion.div>
-            
-            <div className="project-spec-grid">
-               <motion.div 
-                 className="spec-entry spec-entry-card"
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.6 }}
-                 whileHover={{ y: -4 }}
-               >
-                  <span className="label-text">Configuration</span>
-                  <h4>3BHK Ultra-Luxury</h4>
-                  <p style={{fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem'}}>Private Elevator & Stilt Parking</p>
-               </motion.div>
-
-               <motion.div 
-                 className="spec-entry spec-entry-card"
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.6, delay: 0.15 }}
-                 whileHover={{ y: -4 }}
-                 onClick={() => !revealedPrices['The Crown'] && handleOpenModal('The Crown')}
-                 style={{ cursor: revealedPrices['The Crown'] ? 'default' : 'pointer' }}
-               >
-                  <span className="label-text">Investment Portfolio</span>
-                  <div className="hidden-price-block">
-                     {revealedPrices['The Crown'] ? (
-                       <span style={{ fontSize: '1.4rem', fontWeight: 600, color: 'var(--accent-color)', fontFamily: "'Playfair Display', serif" }}>
-                         ₹ 1.99 Cr.
-                       </span>
-                     ) : (
-                       <>
-                         <span className="price-masked" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                           <KeyRound size={14} color="var(--accent-color)" /> Unlock Price Portfolio
-                         </span>
-                         <div className="price-shimmer-bar"></div>
-                       </>
-                     )}
-                  </div>
-               </motion.div>
-
-               <div className="spec-amenities" style={{gridColumn: '1 / -1'}}>
-                  <span className="label-text">Curated Amenities</span>
-                  <motion.div variants={staggerList} initial="initial" whileInView="whileInView" className="amenity-tags">
-                     {crownAmenities.map((item, idx) => (
-                       <motion.span 
-                         key={`crown-amenity-${idx}`} 
-                         variants={revealPill} 
-                         className="amenity-tag"
-                         whileHover={{ y: -3, scale: 1.04 }}
-                       >
-                         <span className="amenity-icon">{item.icon}</span>
-                         {item.title}
-                       </motion.span>
-                     ))}
-                  </motion.div>
-               </div>
-            </div>
          </div>
       </section>
 
@@ -461,24 +394,20 @@ const Project = () => {
           <div className="project-watermark-num">03</div>
 
           <div className="sticky-left">
-            <motion.img 
-              src="/whispering-pines-hero.webp" 
-              alt="Whispering Pines" 
-              className="sticky-image" 
-              style={{ y: y3, scale: scale3 }}
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.8 }}
-            />
-            <div style={{position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', zIndex: 10}}>
-               <motion.div 
-                 className="status-badge badge-construction"
-                 initial={{ opacity: 0, y: 10 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.6, delay: 0.3 }}
-               >
-                  <span className="status-dot"></span> Under Construction
-               </motion.div>
+            <div className="masked-portfolio-visual">
+              <motion.div 
+                className="masked-visual-inner"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="masked-emblem">
+                  <KeyRound size={28} strokeWidth={1.5} />
+                </div>
+                <span className="masked-emblem-tag">CONFIDENTIAL PORTFOLIO</span>
+                <h3 className="masked-emblem-title">WHISPERING PINES</h3>
+              </motion.div>
             </div>
          </div>
 
@@ -493,81 +422,19 @@ const Project = () => {
                />
                <span className="subtitle" style={{ letterSpacing: '0.3em' }}>PROPOSAL 03</span>
                <h2 className="heading-primary" style={{fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', margin: '0.5rem 0'}}>WHISPERING PINES</h2>
-               <span className="label-text" style={{display:'flex', alignItems: 'center', gap: '0.5rem'}}>
-                 <MapPin size={14} color="var(--accent-color)" /> Jaunapur, South Delhi (Near Mandi Road)
-               </span>
             </motion.div>
             
             <motion.div {...textFadeIn} transition={{ delay: 0.2, duration: 1 }} className="project-body">
-              <h3 className="heading-secondary" style={{fontSize: '1.8rem', marginBottom: '1.2rem'}}>Nature-Inspired Gated Sanctuary.</h3>
-              <p className="body-text-large">
-                Where nature whispers peace across majestic pine groves. An exclusive 3 BHK luxury society offering a resort-style swimming pool, clubhouse, see-through Otis/Schindler glass lifts, and 24x7 smart gated security.
+              <p className="body-text-large" style={{ color: 'var(--text-muted)', marginBottom: '2.5rem', lineHeight: '1.8' }}>
+                All specifications, master site plans, and investment structures for this development are strictly confidential under an exclusive private marketing embargo. Direct accredited inquiries only.
               </p>
-              <div style={{marginTop: '2.5rem'}}>
+              <div>
                 <Link to="/property/whispering-pines" className="btn-project-cta">
-                  <span>Explore Whispering Pines</span>
+                  <span>Inquire About Whispering Pines</span>
                   <ArrowUpRight size={18} className="cta-arrow" />
                 </Link>
               </div>
             </motion.div>
-            
-            <div className="project-spec-grid">
-               <motion.div 
-                 className="spec-entry spec-entry-card"
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.6 }}
-                 whileHover={{ y: -4 }}
-               >
-                  <span className="label-text">Configuration</span>
-                  <h4>3BHK Luxury Society</h4>
-               </motion.div>
-
-               <motion.div 
-                 className="spec-entry spec-entry-card"
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.6, delay: 0.15 }}
-                 whileHover={{ y: -4 }}
-                 onClick={() => !revealedPrices['Whispering Pines'] && handleOpenModal('Whispering Pines')}
-                 style={{ cursor: revealedPrices['Whispering Pines'] ? 'default' : 'pointer' }}
-               >
-                  <span className="label-text">Investment Portfolio</span>
-                  <div className="hidden-price-block">
-                     {revealedPrices['Whispering Pines'] ? (
-                       <span style={{ fontSize: '1.4rem', fontWeight: 600, color: 'var(--accent-color)', fontFamily: "'Playfair Display', serif" }}>
-                         ₹ 1.75 Cr.
-                       </span>
-                     ) : (
-                       <>
-                         <span className="price-masked" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-                           <KeyRound size={14} color="var(--accent-color)" /> Unlock Price (₹ 1.XX Cr.)
-                         </span>
-                         <div className="price-shimmer-bar"></div>
-                       </>
-                     )}
-                  </div>
-               </motion.div>
-
-               <div className="spec-amenities" style={{gridColumn: '1 / -1'}}>
-                  <span className="label-text">Curated Amenities</span>
-                  <motion.div variants={staggerList} initial="initial" whileInView="whileInView" className="amenity-tags">
-                     {whisperingAmenities.map((item, idx) => (
-                       <motion.span 
-                         key={`whispering-amenity-${idx}`} 
-                         variants={revealPill} 
-                         className="amenity-tag"
-                         whileHover={{ y: -3, scale: 1.04 }}
-                       >
-                         <span className="amenity-icon">{item.icon}</span>
-                         {item.title}
-                       </motion.span>
-                     ))}
-                  </motion.div>
-               </div>
-            </div>
          </div>
       </section>
 

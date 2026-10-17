@@ -19,7 +19,7 @@ const JournalPage = () => {
         title="Journal &amp; South Delhi Luxury Real Estate Market Insights" 
         description="Explore the latest architectural insights, circle rate guides, and luxury property real estate updates across Vasant Kunj, Jaunapur, Mehrauli, and South Delhi." 
         canonical="/journal"
-        image="/the-crown-new.webp"
+        image="/main-hero.webp"
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Journal", url: "/journal" }

@@ -18,7 +18,10 @@ import {
   Wine,
   Coffee,
   Droplets,
-  Sparkles
+  Sparkles,
+  KeyRound,
+  ArrowLeft,
+  ArrowUpRight
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import Gallery from '../components/Gallery';
@@ -121,6 +124,89 @@ const ProjectDetail = () => {
         <h1 className="heading-secondary">Property Not Found</h1>
         <Link to="/" className="btn btn-solid" style={{marginTop: '2rem', textDecoration: 'none'}}>Return Home</Link>
       </div>
+    );
+  }
+
+  const isMasked = id === 'the-crown' || id === 'whispering-pines';
+
+  if (isMasked) {
+    return (
+      <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-wrapper">
+        <SEO 
+          title={data.title}
+          description={`Private portfolio preview: ${data.title} by UVSP Buildcon.`}
+          canonical={`/property/${id}`}
+          breadcrumbs={[
+            { name: "Home", url: "/" },
+            { name: "Portfolio", url: "/portfolio" },
+            { name: data.title, url: `/property/${id}` }
+          ]}
+        />
+
+        <section className="masked-project-hero">
+          <div className="container" style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto', padding: '13rem 2rem 10rem' }}>
+            <motion.div 
+              className="portfolio-hero-badge"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              style={{ display: 'inline-flex', marginBottom: '2.5rem' }}
+            >
+              <span className="pulsing-radar-dot"></span>
+              <span>PRIVATE PORTFOLIO · DETAILS EMBARGOED</span>
+            </motion.div>
+
+            <div style={{ overflow: 'hidden' }}>
+              <motion.h1 
+                className="heading-primary" 
+                style={{
+                  fontSize: 'clamp(3.5rem, 8vw, 7rem)',
+                  letterSpacing: '0.04em',
+                  marginBottom: '2rem',
+                  textTransform: 'uppercase',
+                  color: '#FFFFFF'
+                }}
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {data.title}
+              </motion.h1>
+            </div>
+
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: '80px' }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              style={{ height: '2px', background: 'var(--accent-color)', margin: '0 auto 2.5rem' }}
+            />
+
+            <motion.p 
+              className="body-text-large"
+              style={{ color: 'var(--text-muted)', marginBottom: '3.5rem', lineHeight: '1.8', maxWidth: '640px', margin: '0 auto 3.5rem' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            >
+              All architectural blueprints, interior exhibitions, and acquisition details for this development are strictly confidential under a private marketing embargo. Accredited patrons may request a private consultation.
+            </motion.p>
+
+            <motion.div 
+              style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Link to="/contact" className="btn btn-solid" style={{ textDecoration: 'none', padding: '1rem 2.5rem' }}>
+                Request Private Briefing
+              </Link>
+              <Link to="/portfolio" className="btn" style={{ textDecoration: 'none', padding: '1rem 2.5rem' }}>
+                Return to Portfolio
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+      </motion.div>
     );
   }
 

@@ -53,7 +53,7 @@ const jaunapurData = {
   heroSubtitle: "Where lush pine groves and serene living converge with South Delhi's premier connectivity.",
   content: [
     { heading: "Why Invest in Jaunapur?", text: "Jaunapur is emerging as South Delhi's most sought-after green sanctuary. Situated directly along Mandi Road with rapid access to the Chattarpur metro corridor and Gurgaon, Jaunapur combines clean air, peaceful surroundings, and exponential property value appreciation." },
-    { heading: "Whispering Pines — Flagship 3 BHK Luxury Living", text: "Featuring our signature development Whispering Pines, residences in Jaunapur offer covered and stilt parking, private clubhouse with swimming pool, gym, sky terrace botanical gardens, and 24x7 gated security." },
+    { heading: "Flagship Luxury Living in Jaunapur", text: "UVSP developments in Jaunapur offer covered and stilt parking, private clubhouse with swimming pool, gym, sky terrace botanical gardens, and 24x7 gated security." },
     { heading: "Connectivity & Infrastructure", text: "Positioned close to premier South Delhi institutions, international schools, golf courses, and diplomatic corridors, Jaunapur delivers unmatched tranquility without sacrificing metropolitan convenience." }
   ]
 };
@@ -73,7 +73,7 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/journal" element={<JournalPage />} />
         <Route path="/journal/:id" element={<ArticleDetail />} />
-        <Route path="/project/featured" element={<Navigate to="/property/the-crown" replace />} />
+        <Route path="/project/featured" element={<Navigate to="/portfolio" replace />} />
         <Route path="/property/:id" element={<ProjectDetail />} />
         <Route path="/portfolio" element={<Project />} />
         <Route path="/admin/leads" element={<LeadsDashboard />} />

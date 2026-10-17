@@ -34,7 +34,7 @@ const AboutPage = () => {
         title="About UVSP Buildcon — 18+ Years of Architectural Mastery in South Delhi" 
         description="UVSP Buildcon — 18+ years of trust, premium construction, and luxury real estate development in South Delhi. Led by Managing Directors Urvashi Verma and Satya Pandey." 
         canonical="/about"
-        image="/the-crown-new.webp"
+        image="/main-hero.webp"
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "About", url: "/about" }

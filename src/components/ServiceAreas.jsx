@@ -8,7 +8,7 @@ const locations = [
     name: 'Vasant Kunj',
     tag: 'Primary Market',
     desc: 'Diplomatic avenues, lush green cover, premium connectivity. The crown jewel of South Delhi real estate.',
-    highlight: 'The Crown · Ryhan Square',
+    highlight: 'Ryhan Square · Selected Works',
     color: '#C8B082',
   },
   {

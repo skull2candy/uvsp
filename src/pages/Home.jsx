@@ -21,7 +21,7 @@ const Home = () => {
         title="Luxury Builder Floors &amp; Premium Properties in South Delhi" 
         description="UVSP Buildcon — 18+ years constructing luxury builder floors, premium 3 BHK residences, and bespoke homes in Vasant Kunj, Jaunapur, Mehrauli, and Chattarpur. 500+ happy families." 
         canonical="/"
-        image="/the-crown-new.webp"
+        image="/main-hero.webp"
         faq={[
           {
             question: "Where are UVSP Buildcon luxury builder floors located in South Delhi?",

@@ -138,7 +138,7 @@ export const journalData = [
     title: 'Why Vasant Kunj Is South Delhi\'s Most Coveted Address for Property Buyers',
     date: 'July 10, 2026',
     category: 'Location Guide',
-    image: '/the-crown-new.webp',
+    image: '/main-hero.webp',
     excerpt: 'A definitive guide for buyers looking to purchase luxury property in Vasant Kunj, New Delhi — covering connectivity, lifestyle, pricing, and best projects.',
     content: `
       <h2>Why Buy Property in Vasant Kunj?</h2>
@@ -148,7 +148,7 @@ export const journalData = [
       <p><strong>Vasant Kunj property prices</strong> have appreciated 12–15% year-on-year, consistently outperforming other Delhi micro-markets. The area is characterized by wide, tree-lined avenues, forest-facing plots, and a socioeconomic profile that ensures permanent demand and value retention.</p>
 
       <h2>Best Projects in Vasant Kunj</h2>
-      <p>UVSP Buildcon's flagship project <strong>The Crown</strong> is located in the heart of Vasant Kunj. Available from ₹1.99 Cr, it offers 3BHK luxury residences with double-height lobbies, elite interiors, and world-class amenities — all designed to the exacting standards of India's top architectural studios.</p>
+      <p>UVSP Buildcon's flagship luxury developments set the gold standard for independent residences with double-height lobbies, elite interiors, and world-class amenities — all designed to the exacting standards of India's top architectural studios.</p>
 
       <h2>Is Now a Good Time to Invest?</h2>
       <p>With limited land availability and consistent demand from NRI buyers, diplomats, and high-income professionals, <strong>investing in Vasant Kunj real estate</strong> today means securing a generational asset at current prices before the next wave of appreciation.</p>
@@ -241,7 +241,7 @@ export const journalData = [
     title: 'Tax Implications of Buying Luxury Real Estate in India (NRI Guide)',
     date: 'August 18, 2026',
     category: 'Legal & Financial',
-    image: '/the-crown-new.webp',
+    image: '/philosophy.webp',
     excerpt: 'Essential tax guidelines, TDS rules, and repatriation insights for NRIs investing in South Delhi luxury homes.',
     content: `
       <h2>NRI Investment Rules</h2>
@@ -313,7 +313,7 @@ export const journalData = [
     title: 'Understanding the \'Per Sq Ft\' Rate in Vasant Kunj: What are You Paying For?',
     date: 'September 20, 2026',
     category: 'Market Trends',
-    image: '/the-crown-new.webp',
+    image: '/project_1.png',
     excerpt: 'Deconstruct the pricing metrics of Vasant Kunj real estate and understand the true value of your investment.',
     content: `
       <h2>Super Area vs. Carpet Area</h2>
@@ -447,7 +447,7 @@ export const journalData = [
       <p>When families purchase a <strong>luxury home in South Delhi</strong>, proximity to top-tier education is often the deciding factor. Vasant Kunj is home to some of India's most prestigious institutions, including Vasant Valley School, Delhi Public School (DPS), and The Heritage School.</p>
       
       <h2>Proximity to UVSP Projects</h2>
-      <p>Our flagship <strong>builder floors in Vasant Kunj</strong>, such as The Crown, are strategically located within a 5-10 minute radius of these elite schools. This eliminates long, exhausting commutes for children and integrates seamlessly into a premium family lifestyle.</p>
+      <p>Our flagship <strong>builder floors in Vasant Kunj</strong> are strategically located within a 5-10 minute radius of these elite schools. This eliminates long, exhausting commutes for children and integrates seamlessly into a premium family lifestyle.</p>
       
       <h2>Admissions and Community</h2>
       <p>Living in a reputed <strong>South Delhi neighborhood</strong> also places you within the correct catchment areas for school admissions. Furthermore, your children grow up in a refined community alongside peers from similar socio-economic backgrounds.</p>
@@ -476,7 +476,7 @@ export const journalData = [
     title: 'The Checklist for Buying a Builder Floor with a Private Terrace',
     date: 'November 28, 2026',
     category: 'Buyer\'s Guide',
-    image: '/the-crown-new.webp',
+    image: '/main-hero.webp',
     excerpt: 'Everything you need to know about terrace rights, structural loads, and luxury outdoor living in Delhi.',
     content: `
       <h2>Terrace Rights Explained</h2>
@@ -544,21 +544,21 @@ export const journalData = [
     `
   },
   {
-    id: 'the-crown-vasant-kunj-walkthrough',
-    title: 'A Walkthrough of \'The Crown\' in Vasant Kunj: Luxury Redefined',
+    id: 'ryhan-square-vasant-kunj-walkthrough',
+    title: 'A Walkthrough of \'Ryhan Square\' in Vasant Kunj: Modern Architectural Serenity',
     date: 'December 28, 2026',
     category: 'Project Spotlight',
-    image: '/the-crown-new.webp',
-    excerpt: 'Take a virtual tour of UVSP Buildcon\'s flagship luxury development in the heart of Vasant Kunj.',
+    image: '/ryhan-square-new.webp',
+    excerpt: 'Take a virtual tour of UVSP Buildcon\'s ready-to-move architectural landmark in Vasant Kunj.',
     content: `
       <h2>Project Overview</h2>
-      <p><strong>The Crown in Vasant Kunj</strong> is UVSP Buildcon\'s magnum opus. Situated on a prime plot, this development offers limited-edition 3BHK and 4BHK ultra-luxury builder floors designed for the capital\'s elite.</p>
+      <p><strong>Ryhan Square in Vasant Kunj</strong> is UVSP Buildcon\'s ready-to-move-in residential landmark. Offering 3BHK bespoke luxury floors, it combines quiet modern serenity with exceptional South Delhi connectivity.</p>
       
       <h2>Premium Specifications</h2>
-      <p>Every inch of <strong>The Crown</strong> radiates sophistication. The facade utilizes climate-responsive stone cladding. Inside, residents enjoy VRV air conditioning, complete home automation, and Italian marble spanning the entire floor plate. The stilt parking accommodates electric vehicles with dedicated high-speed chargers.</p>
+      <p>Every element of <strong>Ryhan Square</strong> reflects enduring build quality. From double-height grand reception lobbies to natural light atriums, elevator access, and CCTV surveillance, it is designed for families who value quality and peace of mind.</p>
       
       <h2>The Booking Process</h2>
-      <p>Acquiring a residence at <strong>The Crown</strong> is an exclusive process. We invite prospective buyers for a private, curated site visit to experience the volumetric space and material quality firsthand. This is not just a real estate transaction; it is an elevation in lifestyle.</p>
+      <p>Acquiring a residence at <strong>Ryhan Square</strong> is seamless. We invite prospective homeowners for a private, curated site visit to experience the finished volumetric spaces firsthand. Contact UVSP advisory to schedule a personal tour.</p>
     `
   }
 ];

@@ -83,12 +83,12 @@ const Hero = () => {
       <div className="hero-ticker-bar">
         <div className="hero-ticker-item">
           <span className="ticker-label">FEATURED CORRIDOR</span>
-          <span className="ticker-val">Whispering Pines, Jaunapur</span>
+          <span className="ticker-val">Whispering Pines</span>
         </div>
         <div className="hero-ticker-sep" />
         <div className="hero-ticker-item">
           <span className="ticker-label">FLAGSHIP RESIDENCE</span>
-          <span className="ticker-val">The Crown, Vasant Kunj</span>
+          <span className="ticker-val">The Crown</span>
         </div>
         <div className="hero-ticker-sep" />
         <div className="hero-ticker-item">

@@ -50,11 +50,9 @@ const Navbar = () => {
                 <div className="dropdown-separator" />
                 <Link to="/property/whispering-pines" className="dropdown-link">
                   <span className="dropdown-item-title">Whispering Pines</span>
-                  <span className="dropdown-item-sub">Jaunapur · 3 BHK</span>
                 </Link>
                 <Link to="/property/the-crown" className="dropdown-link">
                   <span className="dropdown-item-title">The Crown</span>
-                  <span className="dropdown-item-sub">Vasant Kunj · 3 BHK</span>
                 </Link>
                 <Link to="/property/ryhan-square" className="dropdown-link">
                   <span className="dropdown-item-title">Ryhan Square</span>

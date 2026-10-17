@@ -53,7 +53,7 @@ const ContactPage = () => {
         title="Contact UVSP Buildcon — Book Private Site Visit in South Delhi" 
         description="Connect with UVSP Buildcon for luxury homes, 3 BHK builder floors, and bespoke real estate developments in Vasant Kunj, Jaunapur, and Mehrauli. Schedule a private viewing." 
         canonical="/contact"
-        image="/the-crown-new.webp"
+        image="/main-hero.webp"
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Contact", url: "/contact" }
@@ -98,7 +98,7 @@ const ContactPage = () => {
                      SELECT PROJECT OF INTEREST
                    </label>
                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                     {['Whispering Pines (Jaunapur)', 'The Crown (Vasant Kunj)', 'Ryhan Square (South Delhi)', 'General Consultation'].map((proj, idx) => (
+                     {['Whispering Pines', 'The Crown', 'Ryhan Square (South Delhi)', 'General Consultation'].map((proj, idx) => (
                        <span key={idx} style={{
                          fontSize: '0.7rem',
                          padding: '6px 14px',

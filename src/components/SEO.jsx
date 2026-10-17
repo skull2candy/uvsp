@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://uvspbuildcon.com';
 const SITE_NAME = 'UVSP Buildcon Pvt. Ltd.';
-const DEFAULT_IMAGE = `${SITE_URL}/the-crown-new.webp`;
+const DEFAULT_IMAGE = `${SITE_URL}/main-hero.webp`;
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -132,13 +132,13 @@ const SEO = ({
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Whispering Pines 3 BHK Luxury Society Jaunapur",
+        "name": "Whispering Pines",
         "url": `${SITE_URL}/property/whispering-pines`
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "The Crown 3 BHK Luxury Builder Floors in Vasant Kunj",
+        "name": "The Crown",
         "url": `${SITE_URL}/property/the-crown`
       },
       {

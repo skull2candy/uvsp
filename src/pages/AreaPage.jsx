@@ -19,7 +19,7 @@ const AreaPage = ({ areaName, title, description, keywords, heroSubtitle, conten
         title={title}
         description={description}
         canonical={`/builder-floors-${areaName.toLowerCase().replace(' ', '-')}`}
-        image="/the-crown-new.webp"
+        image="/main-hero.webp"
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: `Builder Floors in ${areaName}`, url: `/builder-floors-${areaName.toLowerCase().replace(' ', '-')}` }
